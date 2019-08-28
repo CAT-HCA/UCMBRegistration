@@ -10,6 +10,8 @@
 ## Credits
 No affiliation with UCONN or the UCONN Marching Band.  For educational purposes only.
 
+All UConn logos/branding downloaded from [[https://brand.uconn.edu/#](UConn Brand Standards)]
+
 ## Setup
 
 Clone / Fork / Download Repo 
