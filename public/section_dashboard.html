@@ -59,14 +59,15 @@
         <!-- Side Nav Bar -->
         <div class="row container-fluid">
             <div class="sidebar col-md-3 col-xs-12">
+                    <form>
                 <div class="mx-auto">
-                    <p id="filterText" class="montserratFont text-white text-center">Filter Results</p>
-                    <hr class="bg-white">
+                    
+                        <p id="filterText" class="montserratFont text-white text-center">Filter Results</p>
+                        <hr class="bg-white">
                 </div>
                 <div>
                     <div class="text-center">
-                        <button id="showAllSections" class="text-white text-center btn btn-secondary my-2">SHOW ALL
-                            SECTIONS</button>
+                        <button id="showAllSections" class="text-white text-center btn btn-secondary my-2">Clear Filters</button>
                     </div>
                     <div id="sectionSelectDiv" class="form-group text-secondary text-center w-75 mx-auto">
                         <!--Drop down for selecting a section-->
@@ -93,56 +94,58 @@
                     </div>
 
                 </div>
+                </form>
             </div>
             <!-- end of Side Nav Bar -->
 
             <!-- MAIN CONTENT -->
-            <div class="col-md-9 col-xs-12">
+            <div class="col-xs-12 col-md-9">
                 <h1 class="text-center montserratFont col-12">Section Dashboard</h1>
-
-                <div class="card col-3 float-left mx-1">
-                    <img src="images/mello_sec.jpg" class="card-img-top" alt="UCMB Mellophone Player">
-                    <div class="card-body">
-                        <h2 class="card-title">Mellophones</h2>
-                        <p class="card-text text-primary"></p>
+                <div class="justify-content-around">
+                    <div class="card col-xs-12 col-md-3 float-left mx-1">
+                        <img src="images/mello_sec.jpg" class="card-img-top" alt="UCMB Mellophone Player">
+                        <div class="card-body">
+                            <h2 class="card-title">Mellophones</h2>
+                            <p class="card-text text-primary"></p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Section Leader: </li>
+                            <li class="list-group-item">Members Registered: </li>
+                        </ul>
+                        <div class="card-body text-center">
+                            <a href="#" class="btn btn-sm btn-primary col-5">View Section</a>
+                            <a href="#" class="btn btn-sm btn-primary col-5">Delete Section</a>
+                        </div>
                     </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Section Leader: </li>
-                        <li class="list-group-item">Members Registered: </li>
-                    </ul>
-                    <div class="card-body text-center">
-                        <a href="#" class="btn btn-sm btn-primary col-5">View Section</a>
-                        <a href="#" class="btn btn-sm btn-primary col-5">Delete Section</a>
+                    <div class="card col-xs-12 col-md-3 float-left mx-1">
+                        <img src="images/mello_sec.jpg" class="card-img-top" alt="UCMB Mellophone Player">
+                        <div class="card-body">
+                            <h2 class="card-title">Mellophones</h2>
+                            <p class="card-text text-primary"></p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Section Leader: </li>
+                            <li class="list-group-item">Members Registered: </li>
+                        </ul>
+                        <div class="card-body text-center">
+                            <a href="#" class="btn btn-sm btn-primary col-5">View Section</a>
+                            <a href="#" class="btn btn-sm btn-primary col-5">Delete Section</a>
+                        </div>
                     </div>
-                </div>
-                <div class="card col-3 float-left mx-1">
-                    <img src="images/mello_sec.jpg" class="card-img-top" alt="UCMB Mellophone Player">
-                    <div class="card-body">
-                        <h2 class="card-title">Mellophones</h2>
-                        <p class="card-text text-primary"></p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Section Leader: </li>
-                        <li class="list-group-item">Members Registered: </li>
-                    </ul>
-                    <div class="card-body text-center">
-                        <a href="#" class="btn btn-sm btn-primary col-5">View Section</a>
-                        <a href="#" class="btn btn-sm btn-primary col-5">Delete Section</a>
-                    </div>
-                </div>
-                <div class="card col-3 float-left mx-1">
-                    <img src="images/mello_sec.jpg" class="card-img-top" alt="UCMB Mellophone Player">
-                    <div class="card-body">
-                        <h2 class="card-title">Mellophones</h2>
-                        <p class="card-text text-primary"></p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Section Leader: </li>
-                        <li class="list-group-item">Members Registered: </li>
-                    </ul>
-                    <div class="card-body text-center">
-                        <a href="#" class="btn btn-sm btn-primary col-5">View Section</a>
-                        <a href="#" class="btn btn-sm btn-primary col-5">Delete Section</a>
+                    <div class="card col-xs-12 col-md-3 float-left mx-1">
+                        <img src="images/mello_sec.jpg" class="card-img-top" alt="UCMB Mellophone Player">
+                        <div class="card-body">
+                            <h2 class="card-title">Mellophones</h2>
+                            <p class="card-text text-primary"></p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Section Leader: </li>
+                            <li class="list-group-item">Members Registered: </li>
+                        </ul>
+                        <div class="card-body text-center">
+                            <a href="#" class="btn btn-sm btn-primary col-5">View Section</a>
+                            <a href="#" class="btn btn-sm btn-primary col-5">Delete Section</a>
+                        </div>
                     </div>
                 </div>
             </div>
