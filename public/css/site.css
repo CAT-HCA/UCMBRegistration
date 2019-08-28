@@ -5,3 +5,16 @@
 .arialFont {
 	font-family: arial, sans-serif;
 }
+
+
+.fab {
+	color: white;
+}
+
+.fab:hover {
+	color: #7c878e;
+}
+
+#followSoc {
+	font-size: 30px;
+}
