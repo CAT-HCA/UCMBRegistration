@@ -178,6 +178,7 @@ app.get("/index.html", function (req, res) {
     res.sendFile( __dirname + "/public/" + "index.html" );
  })
 
+
 // TODO:  YOU WILL NEED TO ADD MORE CALLS TO app.get() FOR EACH PAGE
 //        YOU END UP BUILDING
 
@@ -194,10 +195,10 @@ app.get("/api/leagues", function (req, res) {
     let data = fs.readFileSync( __dirname + "/data/leagues.json", "utf8");
     data = JSON.parse(data);
     
-    // console.log("Returned leagues are: ");
-    // for(let i = 0; i < data.length; i++) {
-    //   console.log("League: " + data[i].Name);
-    // }
+    console.log("Returned leagues are: ");
+    for(let i = 0; i < data.length; i++) {
+      console.log("League: " + data[i].Name);
+    }
     res.end( JSON.stringify(data) );
 });
 

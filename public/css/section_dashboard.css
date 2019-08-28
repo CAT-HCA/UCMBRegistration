@@ -1,8 +1,7 @@
 .sidebar {
     height: 100%;
-    width: 25%;
     left: 0;
-    z-index: -1;
+
     background-color: #182a60;
     overflow-x: hidden;
     padding-top: 20px;
