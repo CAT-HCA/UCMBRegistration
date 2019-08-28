@@ -1,0 +1,22 @@
+.sidebar {
+    height: 100%;
+    width: 25%;
+    left: 0;
+    z-index: -1;
+    background-color: #182a60;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+
+  #filterText{
+      font-size: 20px;
+  }
+
+  .card-title {
+      font-size: 18px;
+  }
+  
+  .row{
+    margin-left: -15px;
+    margin-right: -15px;
+}
