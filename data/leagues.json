@@ -1,0 +1,27 @@
+[
+	{
+		"Name": "High Brass",
+		"Code": "HighBrass",
+		"Description": "This group consists of the Trumpet and Mellophone sections"
+	},
+	{
+		"Name": "Low Brass",
+		"Code": "LowBrass",
+		"Description": "This group consists of the Trombone, Baritone, and Sousaphone sections"
+	},
+	{
+		"Name": "Woodwind",
+		"Code": "Woodwind",
+		"Description": "This group consists of the Flute, Clarinet, and Saxophone sections"
+    },
+    {
+		"Name": "Percussion",
+		"Code": "Percussion",
+		"Description": "This group consists of the Drumline and Front Ensemble sections"
+    },
+    {
+		"Name": "Auxiliary",
+		"Code": "Auxiliary",
+		"Description": "This group consists of the Baton Twirlers and Colorguard section"
+    }    
+]
