@@ -10,6 +10,7 @@
 		"MinMemberAge": 17,
 		"MaxMemberAge": 100,
 		"TeamGender": "Any",
+		"Picture": "",
 		"Members": [
 			{
 				"MemberId": 1,
@@ -33,6 +34,7 @@
 		"MinMemberAge": 17,
 		"MaxMemberAge": 100,
 		"TeamGender": "Any",
+		"Picture": "",
 		"Members": [
 			{
 				"MemberId": 1,
@@ -56,6 +58,7 @@
 		"MinMemberAge": 17,
 		"MaxMemberAge": 100,
 		"TeamGender": "Any",
+		"Picture": "",
 		"Members": [
 			{
 				"MemberId": 1,
@@ -79,6 +82,7 @@
 		"MinMemberAge": 17,
 		"MaxMemberAge": 100,
 		"TeamGender": "Any",
+		"Picture": "",
 		"Members": [
 			{
 				"MemberId": 1,
@@ -102,6 +106,7 @@
 		"MinMemberAge": 17,
 		"MaxMemberAge": 100,
 		"TeamGender": "Any",
+		"Picture": "",
 		"Members": [
 			{
 				"MemberId": 1,
@@ -125,6 +130,7 @@
 		"MinMemberAge": 17,
 		"MaxMemberAge": 100,
 		"TeamGender": "Any",
+		"Picture": "",
 		"Members": [
 			{
 				"MemberId": 1,
@@ -148,6 +154,7 @@
 		"MinMemberAge": 17,
 		"MaxMemberAge": 100,
 		"TeamGender": "Any",
+		"Picture": "",
 		"Members": [
 			{
 				"MemberId": 1,
@@ -171,6 +178,7 @@
 		"MinMemberAge": 17,
 		"MaxMemberAge": 100,
 		"TeamGender": "Any",
+		"Picture": "",
 		"Members": [
 			{
 				"MemberId": 1,
@@ -194,6 +202,7 @@
 		"MinMemberAge": 17,
 		"MaxMemberAge": 100,
 		"TeamGender": "Any",
+		"Picture": "",
 		"Members": [
 			{
 				"MemberId": 1,
@@ -217,6 +226,7 @@
 		"MinMemberAge": 17,
 		"MaxMemberAge": 100,
 		"TeamGender": "Any",
+		"Picture": "",
 		"Members": [
 			{
 				"MemberId": 1,
@@ -240,6 +250,7 @@
 		"MinMemberAge": 17,
 		"MaxMemberAge": 100,
 		"TeamGender": "Any",
+		"Picture": "",
 		"Members": [
 			{
 				"MemberId": 1,
@@ -263,6 +274,7 @@
 		"MinMemberAge": 17,
 		"MaxMemberAge": 100,
 		"TeamGender": "Any",
+		"Picture": "",
 		"Members": [
 			{
 				"MemberId": 1,
