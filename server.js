@@ -233,8 +233,8 @@ app.get("/api/teams/:id", function (req, res) {
 		return;
 	}
 
-    //console.log("Returned data is: ");
-    //logOneTeam(match);
+    console.log("Returned data is: ");
+    logOneTeam(match);
     res.end( JSON.stringify(match) );
 })
 

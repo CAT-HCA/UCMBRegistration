@@ -7,9 +7,8 @@ $(document).ready(function() {
 		for (let i = 0; i < data.length; i++) {
 			$("#sectionDropDown").append(`<option value='${data[i].TeamId}'>${data[i].TeamName}</option>`);
 			$("#managerDropDown").append(`<option value='${data[i].TeamId}'>${data[i].ManagerName}</option>`);
-			createHtml(data[i], i)
+			createHtml(data[i], i);
 		}
-
 	});
 	//retrieving "league"(instrument family) data from json file
 	$.getJSON("/api/leagues", function(data) {
@@ -18,7 +17,39 @@ $(document).ready(function() {
 			$("#leagueDropDown").append(`<option value='${data[i].Code}'>${data[i].Name}</option>`);
 		}
 	});
+
+	// call to courses api to pull courses matching selected category
+	$("#leagueDropDown").on("change", function() {
+		$("#sectionCardDiv").empty();
+		if ($("#leagueDropDown").val() != "-1") {
+			$.getJSON("/api/teams/byleague/" + $("#leagueDropDown").val(), function(data) {
+				for (let i = 0; i < data.length; i++) {
+					createHtml(data[i], i);
+				}
+			});
+		}
+	});
+
+	// call to courses api to pull courses matching selected category
+	$("#sectionDropDown").on("change", function() {
+		$("#sectionCardDiv").empty();
+		callGetTeams($("#sectionDropDown"), "/api/teams/");
+	});
+
+	// call to courses api to pull courses matching selected category
+	$("#managerDropDown").on("change", function() {
+		$("#sectionCardDiv").empty();
+		callGetTeams($("#managerDropDown"));
+	});
 });
+
+function callGetTeams(dropDownField) {
+	if (dropDownField.val() != "-1") {
+		$.getJSON("/api/teams/" + dropDownField.val(), function(data) {
+			createHtml(data, dropDownField.val());
+		});
+	}
+}
 function createHtml(section, i) {
 	//appending section cards to card div
 	$("#sectionCardDiv").append(
@@ -31,7 +62,7 @@ function createHtml(section, i) {
 	$(`#cardId${[i]}`).append(
 		$("<img />")
 			.addClass("card-img-top")
-			.attr({ src: "/images/mello_sec.jpg", alt: "Marching Band Member"})
+			.attr({ src: "/images/mello_sec.jpg", alt: "Marching Band Member" })
 	);
 	// code for src attr once pictures are found src: section.Picture
 	//appending card body to card
@@ -45,7 +76,7 @@ function createHtml(section, i) {
 	$(`#cardHeadingDiv${[i]}`).append(
 		$("<h2 />")
 			.addClass("card-title")
-			.attr("id", `cardHeadingDiv${[i]}`)
+			.attr("id", `cardHeading${[i]}`)
 			.html(section.TeamName)
 	);
 
