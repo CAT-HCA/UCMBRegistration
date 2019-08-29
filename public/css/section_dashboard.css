@@ -1,21 +1,26 @@
 .sidebar {
-    height: 100%;
-    left: 0;
+	height: 100%;
+	left: 0;
 
-    background-color: #182a60;
-    overflow-x: hidden;
-    padding-top: 20px;
-  }
+	background-color: #182a60;
+	overflow-x: hidden;
+	padding-top: 20px;
+}
 
-  #filterText{
-      font-size: 20px;
-  }
+#filterText {
+	font-size: 20px;
+}
 
-  .card-title {
-      font-size: 18px;
-  }
-  
-  .row{
-    margin-left: -15px;
-    margin-right: -15px;
+.card-title {
+	font-size: 18px;
+}
+
+.row {
+	margin-left: -15px;
+	margin-right: -15px;
+}
+
+.list-group-item {
+    line-height: 6px;
+   
 }
