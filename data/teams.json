@@ -34,7 +34,7 @@
 		"MinMemberAge": 17,
 		"MaxMemberAge": 100,
 		"TeamGender": "Any",
-		"Picture": "",
+		"Picture": "/images/mello_sec.jpg",
 		"Members": [
 			{
 				"MemberId": 1,
