@@ -102,18 +102,19 @@ function createHtml(section, i) {
 			.attr("id", `cardBtnDiv${[i]}`)
 	);
 
+	let btnHref = encodeURI("team_details.html?id=" + section.TeamId + "&name=" + section.TeamName);
 	//appending header to title div
 	$(`#cardBtnDiv${[i]}`).append(
 		$("<a />")
 			.addClass("btn btn-sm btn-primary col-5 cardBodyText mx-2")
-			.attr("href", "#")
+			.attr("href", btnHref)
 			.html("View Section")
 	);
 	//appending header to title div
 	$(`#cardBtnDiv${[i]}`).append(
 		$("<a />")
 			.addClass("btn btn-sm btn-primary col-5 cardBodyText")
-			.attr("href", "#")
+			.attr("href", "")
 			.html("Delete Section")
 	);
 }

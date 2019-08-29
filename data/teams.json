@@ -1,7 +1,7 @@
 [
 	{
 		"TeamId": 1,
-		"TeamName": "Trumpets",
+		"TeamName": "Trumpet",
 		"League": "HighBrass",
 		"ManagerName": "Aliza Barlow",
 		"ManagerPhone": "555-521-8146",
@@ -25,7 +25,7 @@
 	},
 	{
 		"TeamId": 2,
-		"TeamName": "Mellophones",
+		"TeamName": "Mellophone",
 		"League": "HighBrass",
 		"ManagerName": "Hollie Harwood",
 		"ManagerPhone": "555-521-8158",
@@ -49,7 +49,7 @@
 	},
 	{
 		"TeamId": 3,
-		"TeamName": "Trombones",
+		"TeamName": "Trombone",
 		"League": "LowBrass",
 		"ManagerName": "Sid Branch",
 		"ManagerPhone": "555-521-8567",
@@ -73,7 +73,7 @@
 	},
 	{
 		"TeamId": 4,
-		"TeamName": "Baritones",
+		"TeamName": "Baritone",
 		"League": "LowBrass",
 		"ManagerName": "Ada Sutherland",
 		"ManagerPhone": "555-521-8158",
@@ -97,7 +97,7 @@
 	},
 	{
 		"TeamId": 5,
-		"TeamName": "Sousaphones",
+		"TeamName": "Sousaphone",
 		"League": "LowBrass",
 		"ManagerName": "Felicia Medrano",
 		"ManagerPhone": "555-521-8158",
@@ -121,7 +121,7 @@
 	},
 	{
 		"TeamId": 6,
-		"TeamName": "Flutes",
+		"TeamName": "Flute",
 		"League": "Woodwind",
 		"ManagerName": "Marlon Whitakero",
 		"ManagerPhone": "555-521-8158",
@@ -145,7 +145,7 @@
 	},
 	{
 		"TeamId": 7,
-		"TeamName": "Clarinets",
+		"TeamName": "Clarinet",
 		"League": "Woodwind",
 		"ManagerName": "Marcie Morrison",
 		"ManagerPhone": "555-521-8158",
@@ -169,7 +169,7 @@
 	},
 	{
 		"TeamId": 8,
-		"TeamName": "Saxophones",
+		"TeamName": "Saxophone",
 		"League": "Woodwind",
 		"ManagerName": "Guy Wilder",
 		"ManagerPhone": "555-521-8158",
@@ -241,7 +241,7 @@
 	},
 	{
 		"TeamId": 11,
-		"TeamName": "Baton Twirlers",
+		"TeamName": "Baton Twirler",
 		"League": "Auxiliary",
 		"ManagerName": "Ramone Cisneros",
 		"ManagerPhone": "555-521-8158",
