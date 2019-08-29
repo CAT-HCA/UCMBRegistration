@@ -178,6 +178,10 @@ app.get("/index.html", function (req, res) {
     res.sendFile( __dirname + "/public/" + "index.html" );
  })
 
+ app.get("/section_dashboard.html", function (req, res) {
+    res.sendFile( __dirname + "/public/" + "section_dashboard.html" );
+ })
+
 
 // TODO:  YOU WILL NEED TO ADD MORE CALLS TO app.get() FOR EACH PAGE
 //        YOU END UP BUILDING
@@ -209,8 +213,8 @@ app.get("/api/teams", function (req, res) {
     let data = fs.readFileSync( __dirname + "/data/teams.json", "utf8");
     data = JSON.parse(data);
 	
-    //console.log("Returned data is: ");
-    //logArrayOfTeams(data);
+    console.log("Returned data is: ");
+    logArrayOfTeams(data);
     res.end( JSON.stringify(data) );
 });
 
