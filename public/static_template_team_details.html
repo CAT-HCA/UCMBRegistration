@@ -25,7 +25,7 @@
 
     <!--Title and favicon in tab-->
     <link rel="icon" href="images/favicon.png" type="image/x-icon" />
-    <title>UConn Marching Band Registration</title>
+    <title id="sectionTitle">...</title>
 </head>
 
 <body class="w-100 bg-light">
@@ -46,7 +46,6 @@
                     Dashboard</a>
                 <a class="nav-item nav-link p-2 mr-2 montserratFont active" href="">Section
                     Dashboard</a>
-
                 <a class="nav-item nav-link p-2 mr-2 montserratFont inactive" href="">Member
                     Dashboard</a>
             </div>
@@ -60,55 +59,42 @@
             <form>
                 <div class="mx-auto">
                     <div class="text-center">
-                        <button id="showAllSections" class="text-white text-center btn btn-secondary my-2">Show All
-                            Sections</button>
+                        <a id="showAllSections" href=section_dashboard.html
+                            class="text-white text-center btn btn-secondary my-2"><i
+                                class="fas fa-arrow-circle-left"></i> Go Back</a>
                         <br>
                     </div>
-                    <p id="filterText" class="montserratFont text-white text-center mt-2">Filter Results By:</p>
+                    <p id="filterText" class="montserratFont text-white text-center mt-2">Manage Section:</p>
                     <hr class="bg-white">
                 </div>
-                <div>
-
-                    <div id="leagueSelectDiv" class="form-group text-secondary text-center w-75 mx-auto">
-                        <!--Drop down for selecting a section-->
-                        <label for="leagueDropDown" class="text-white">INSTRUMENT FAMILY</label>
-                        <select class="form-control" id="leagueDropDown" name="leagueDropDown">
-                            <option value="-1">Choose a Family</option>
-                        </select>
-                        <div class="text-center"><br>-- or --</div>
-                    </div>
-                    <div id="sectionSelectDiv" class="form-group text-secondary text-center w-75 mx-auto">
-                        <!--Drop down for selecting a section-->
-                        <label for="sectionDropDown" class="text-white">SECTION</label>
-                        <select class="form-control" id="sectionDropDown" name="sectionDropDown">
-                            <option value="-1">Choose a Section</option>
-                        </select>
-                        <div class="text-center"><br>-- or --</div>
-                    </div>
-
-                    <div id="managerSelectDiv" class="form-group text-secondary text-center w-75 mx-auto mb-4">
-                        <!--Drop down for selecting a section-->
-                        <label for="managerDropDown" class="text-white">SECTION LEADER</label>
-                        <select class="form-control" id="managerDropDown" name="managerDropDown">
-                            <option value="-1">Choose a Section Leader</option>
-                        </select>
-                    </div>
-
+                <div class="text-center">
+                    <div><a class="btn btn-sm btn-secondary my-4 w-75" href="">View Team Details</a></div>
+                    <div><a class="btn btn-sm btn-secondary my-4 w-75" href="">Edit Team Details</a></div>
+                    <div><a class="btn btn-sm btn-secondary my-4 w-75" href="">Add Team Member</a></div>
+                    <div><a class="btn btn-sm btn-secondary my-4 w-75" href="">Edit Team Member</a></div>
                 </div>
             </form>
         </div>
+
         <!-- end of Side Nav Bar -->
+
 
         <!-- MAIN CONTENT -->
         <div class="col-xs-12 col-md-9 mx-auto container-fluid">
-            <h1 class="text-center montserratFont col-12">Section Dashboard</h1>
-            <div id="sectionCardDiv" class="text-center">
+            <h1 class="text-center montserratFont col-12" id="dashboardTitle">Section Dashboard</h1>
+            <div id="sectionContent" class="mx-auto">
+                <div class="card-columns">
+                    
+
+
+                </div>
             </div>
         </div>
     </div>
+
     <!-- END OF MAIN CONTENT -->
     <!-- FOOTER -->
-    <footer class="bg-warning border-top border-white footer col-12">
+    <footer class="bg-warning border-top border-white mt-5 col-12 footer">
         <!-- Social Media Links-->
         <div>
             <p id="followSoc" class="text-center text-danger montserratFont">Follow the UCMB</p>
@@ -143,7 +129,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <script src="scripts/section_dashboard.js"></script>
+    <script src="scripts/team_details.js"></script>
 
 </body>
 
