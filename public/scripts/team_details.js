@@ -39,6 +39,6 @@ function createMemberRow(memberName) {
 	);
 	$("#membershipList").append(
 		$("<a />")
-			.html(`${memberName} <a class="float-right"><i class="far fa-edit float-right"></i></a>`)
+			.html(`${memberName}<i class="far fa-edit float-right"></i>`)
 	);
 }
