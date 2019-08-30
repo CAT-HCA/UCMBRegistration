@@ -24,3 +24,38 @@
 	font-size: 12px;
 }
 
+/* formatting for footer*/
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+body {
+	margin-bottom: 200px;
+	min-height:100%;
+
+}
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+
+
+.sidebar {
+	min-height: 100%;
+	left: 0;
+	margin-bottom: -200px;
+
+
+	background-color: #182a60;
+
+	padding-top: 20px;
+}
+
+.row {
+	margin-left: -15px !important;
+	margin-right: -15px !important;
+}

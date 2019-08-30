@@ -1,11 +1,4 @@
-.sidebar {
-	height: 100%;
-	left: 0;
 
-	background-color: #182a60;
-
-	padding-top: 20px;
-}
 
 #filterText {
 	font-size: 20px;
@@ -15,10 +8,7 @@
 	font-size: 18px;
 }
 
-.row {
-	margin-left: -15px;
-	margin-right: -15px;
-}
+
 
 .list-group-item {
     line-height: 6px;

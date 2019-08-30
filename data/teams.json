@@ -11,6 +11,7 @@
 		"MaxMemberAge": 100,
 		"TeamGender": "Any",
 		"Picture": "",
+		"Description": "",
 		"Members": [
 			{
 				"MemberId": 1,
@@ -35,6 +36,7 @@
 		"MaxMemberAge": 100,
 		"TeamGender": "Any",
 		"Picture": "/images/mello_sec.jpg",
+		"Description": "",
 		"Members": [
 			{
 				"MemberId": 1,
@@ -59,6 +61,7 @@
 		"MaxMemberAge": 100,
 		"TeamGender": "Any",
 		"Picture": "",
+		"Description": "",
 		"Members": [
 			{
 				"MemberId": 1,
@@ -83,6 +86,7 @@
 		"MaxMemberAge": 100,
 		"TeamGender": "Any",
 		"Picture": "",
+		"Description": "",
 		"Members": [
 			{
 				"MemberId": 1,
@@ -107,6 +111,7 @@
 		"MaxMemberAge": 100,
 		"TeamGender": "Any",
 		"Picture": "",
+		"Description": "",
 		"Members": [
 			{
 				"MemberId": 1,
@@ -131,6 +136,7 @@
 		"MaxMemberAge": 100,
 		"TeamGender": "Any",
 		"Picture": "",
+		"Description": "",
 		"Members": [
 			{
 				"MemberId": 1,
@@ -155,6 +161,7 @@
 		"MaxMemberAge": 100,
 		"TeamGender": "Any",
 		"Picture": "",
+		"Description": "",
 		"Members": [
 			{
 				"MemberId": 1,
@@ -179,6 +186,7 @@
 		"MaxMemberAge": 100,
 		"TeamGender": "Any",
 		"Picture": "",
+		"Description": "",
 		"Members": [
 			{
 				"MemberId": 1,
@@ -203,6 +211,7 @@
 		"MaxMemberAge": 100,
 		"TeamGender": "Any",
 		"Picture": "",
+		"Description": "",
 		"Members": [
 			{
 				"MemberId": 1,
@@ -227,6 +236,7 @@
 		"MaxMemberAge": 100,
 		"TeamGender": "Any",
 		"Picture": "",
+		"Description": "",
 		"Members": [
 			{
 				"MemberId": 1,
@@ -251,6 +261,7 @@
 		"MaxMemberAge": 100,
 		"TeamGender": "Any",
 		"Picture": "",
+		"Description": "",
 		"Members": [
 			{
 				"MemberId": 1,
@@ -275,6 +286,7 @@
 		"MaxMemberAge": 100,
 		"TeamGender": "Any",
 		"Picture": "",
+		"Description": "",
 		"Members": [
 			{
 				"MemberId": 1,
