@@ -102,7 +102,7 @@ function createHtml(section, i) {
 			.attr("id", `cardBtnDiv${[i]}`)
 	);
 
-	let btnHref = encodeURI("team_details.html?id=" + section.TeamId + "&name=" + section.TeamName);
+	let btnHref = encodeURI("team_details.html?id=" + section.TeamId + "&name=" + section.TeamName + "&code=" + section.League);
 	//appending header to title div
 	$(`#cardBtnDiv${[i]}`).append(
 		$("<a />")

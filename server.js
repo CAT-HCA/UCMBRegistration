@@ -185,6 +185,24 @@ app.get("/api/teams", function(req, res) {
 	logArrayOfTeams(data);
 	res.end(JSON.stringify(data));
 });
+// GET League BY league code
+app.get("/api/leagues/:id", function(req, res) {
+	let id = req.params.id;
+	console.log("Received a GET request for league " + id);
+
+	let data = fs.readFileSync(__dirname + "/data/leagues.json", "utf8");
+	data = JSON.parse(data);
+
+	let match = data.find(league=> league.Code == id);
+	if (match == null) {
+		res.status(404).send("Not Found");
+		return;
+	}
+
+	console.log("Returned data is: ");
+	console.log(JSON.stringify(match));
+	res.end(JSON.stringify(match));
+});
 
 // GET ONE TEAM BY ID
 app.get("/api/teams/:id", function(req, res) {
@@ -267,6 +285,7 @@ app.post("/api/teams", urlencodedParser, function(req, res) {
 		MaxMemberAge: Number(req.body.maxmemberage),
 		TeamGender: req.body.teamgender,
 		Picture: "",
+		Description: req.body.description,
 		Members: [],
 	};
 
@@ -309,6 +328,7 @@ app.put("/api/teams", urlencodedParser, function(req, res) {
 		MaxMemberAge: Number(req.body.maxmemberage),
 		TeamGender: req.body.teamgender,
 		Picture: "",
+		Description: req.body.description
 	};
 
 	//console.log("Performing team validation...")
