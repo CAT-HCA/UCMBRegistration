@@ -18,7 +18,7 @@ $(document).ready(function() {
 		}
 	});
 
-	// call to courses api to pull courses matching selected category
+	// call to leagues api to pull teams matching selected category
 	$("#leagueDropDown").on("change", function() {
 		$("#sectionCardDiv").empty();
 		if ($("#leagueDropDown").val() != "-1") {
@@ -30,13 +30,13 @@ $(document).ready(function() {
 		}
 	});
 
-	// call to courses api to pull courses matching selected category
+	// call to teams api to pull teams matching selected category
 	$("#sectionDropDown").on("change", function() {
 		$("#sectionCardDiv").empty();
 		callGetTeams($("#sectionDropDown"), "/api/teams/");
 	});
 
-	// call to courses api to pull courses matching selected category
+	// call to teams api to pull teams matching selected category
 	$("#managerDropDown").on("change", function() {
 		$("#sectionCardDiv").empty();
 		callGetTeams($("#managerDropDown"));
@@ -54,7 +54,7 @@ function createHtml(section, i) {
 	//appending section cards to card div
 	$("#sectionCardDiv").append(
 		$("<div />")
-			.addClass("card col-12 col-md-6 col-lg-4 col-xl-3 float-left m-4 .d-flex")
+			.addClass("card col-12 col-md-6 col-xl-3 float-left m-4 .d-flex")
 			.attr("id", `cardId${[i]}`)
 	);
 
