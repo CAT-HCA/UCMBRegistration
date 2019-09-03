@@ -331,13 +331,13 @@ app.put("/api/teams", urlencodedParser, function(req, res) {
 		Description: req.body.description
 	};
 
-	//console.log("Performing team validation...")
+	console.log("Performing team validation...")
 	if (!isValidTeam(team)) {
-		//console.log("Invalid  data!")
+		console.log("Invalid  data!")
 		res.status(400).send("Bad Request - Incorrect or Missing Data");
 		return;
 	}
-	//console.log("Valid data!")
+	console.log("Valid data!")
 
 	let data = fs.readFileSync(__dirname + "/data/teams.json", "utf8");
 	data = JSON.parse(data);
@@ -383,8 +383,8 @@ app.put("/api/teams", urlencodedParser, function(req, res) {
 	}
 	(match.TeamGender = req.body.teamgender), fs.writeFileSync(__dirname + "/data/teams.json", JSON.stringify(data));
 
-	//console.log("Team updated!");
-	//logOneTeam(match);
+	console.log("Team updated!");
+	logOneTeam(match);
 	res.status(200).send();
 });
 
