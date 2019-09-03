@@ -1,1 +1,356 @@
-[{"TeamId":1,"TeamName":"Trumpets","League":"HighBrass","ManagerName":"Aliza Barlow","ManagerPhone":"555-521-8146","ManagerEmail":"AlizaBarlow@gmail.com","MaxTeamMembers":70,"MinMemberAge":17,"MaxMemberAge":100,"TeamGender":"Any","Picture":"/images/section_photos/section_photo_1.jpg","Description":"","Members":[{"MemberId":1,"Email":"LawsonBarnes@gmail.com","MemberName":"Lawson Barnes","ContactName":"Lawson Barnes","Age":21,"Gender":"Male","Phone":"555-521-8146"},{"MemberId":101,"Email":"corinne.a.trudeau@gmail.com","MemberName":"Corinne Trudeau","ContactName":"Corinne Trudeau","Age":28,"Gender":"Female","Phone":"860-917-2859"}]},{"TeamId":2,"TeamName":"yayayayay","League":"HighBrass","ManagerName":"Hollie Harwood","ManagerPhone":"555-521-8158","ManagerEmail":"HollieHarwood@gmail.com","MaxTeamMembers":40,"MinMemberAge":17,"MaxMemberAge":100,"TeamGender":"Any","Picture":"/images/section_photos/section_photo_2.jpg","Description":"","Members":[{"MemberId":1,"Email":"GregorProsser@gmail.com","MemberName":"Gregor Prosser","ContactName":"Gregor Prosser","Age":19,"Gender":"Male","Phone":"555-521-2546"},{"MemberId":102,"Email":"corinne.a.trudeau@gmail.com","MemberName":"Cori","ContactName":"Cori","Age":28,"Gender":"Male","Phone":"860-917-2859"},{"MemberId":103,"Email":"corinne.a.trudeau@gmail.com","MemberName":"TEST","ContactName":"TESt","Age":28,"Gender":"Female","Phone":"860-917-2859"},{"MemberId":104,"Email":"corinne.a.trudeau@gmail.com","MemberName":"TEST","ContactName":"TESt","Age":28,"Gender":"Female","Phone":"860-917-2859"},{"MemberId":105,"Email":"corinne.a.trudeau@gmail.com","MemberName":"TEST","ContactName":"TESt","Age":28,"Gender":"Female","Phone":"860-917-2859"},{"MemberId":106,"Email":"Will.ader@gmail.com","MemberName":"cori","ContactName":"cori","Age":28,"Gender":"Female","Phone":"860-917-2859"}]},{"TeamId":3,"TeamName":"Trombone","League":"LowBrass","ManagerName":"Sid Branch","ManagerPhone":"555-521-8567","ManagerEmail":"SidBranch@gmail.com","MaxTeamMembers":25,"MinMemberAge":17,"MaxMemberAge":100,"TeamGender":"Any","Picture":"/images/section_photos/section_photo_3.jpg","Description":"","Members":[{"MemberId":1,"Email":"SnehaHassan.com","MemberName":"Sneha Hassan","ContactName":"Sneha Hassan","Age":20,"Gender":"Female","Phone":"555-521-2836"}]},{"TeamId":4,"TeamName":"Baritone","League":"LowBrass","ManagerName":"Ada Sutherland","ManagerPhone":"555-521-8158","ManagerEmail":"AdaSutherland@gmail.com","MaxTeamMembers":40,"MinMemberAge":17,"MaxMemberAge":100,"TeamGender":"Any","Picture":"/images/section_photos/section_photo_4.jpg","Description":"","Members":[{"MemberId":1,"Email":"HazelCurran@gmail.com","MemberName":"Hazel Curran","ContactName":"Hazel Curran","Age":20,"Gender":"Female","Phone":"555-521-1736"}]},{"TeamId":5,"TeamName":"Sousaphone","League":"LowBrass","ManagerName":"Felicia Medrano","ManagerPhone":"555-521-8158","ManagerEmail":"FeliciaMedrano@gmail.com","MaxTeamMembers":20,"MinMemberAge":17,"MaxMemberAge":100,"TeamGender":"Any","Picture":"/images/section_photos/section_photo_5.jpg","Description":"","Members":[{"MemberId":1,"Email":"MistyMoon@gmail.com","MemberName":"Misty Moon","ContactName":"Misty Moon","Age":50,"Gender":"Female","Phone":"555-521-1962"}]},{"TeamId":6,"TeamName":"Flute","League":"Woodwind","ManagerName":"Marlon Whitakero","ManagerPhone":"555-521-8158","ManagerEmail":"MarlonWhitaker@gmail.com","MaxTeamMembers":5,"MinMemberAge":17,"MaxMemberAge":100,"TeamGender":"Any","Picture":"/images/section_photos/section_photo_6.jpg","Description":"","Members":[{"MemberId":1,"Email":"EarlLester@gmail.com","MemberName":"Earl Lester","ContactName":"Earl Lester","Age":21,"Gender":"Female","Phone":"555-521-1962"}]},{"TeamId":7,"TeamName":"Clarinet","League":"Woodwind","ManagerName":"Marcie Morrison","ManagerPhone":"555-521-8158","ManagerEmail":"MarcieMorrisonr@gmail.com","MaxTeamMembers":10,"MinMemberAge":17,"MaxMemberAge":100,"TeamGender":"Any","Picture":"/images/section_photos/section_photo_7.jpg","Description":"","Members":[{"MemberId":1,"Email":"JoshRyan@gmail.com","MemberName":"Josh Ryan","ContactName":"Josh Ryan","Age":18,"Gender":"Male","Phone":"555-521-1896"}]},{"TeamId":8,"TeamName":"Saxophone","League":"Woodwind","ManagerName":"Guy Wilder","ManagerPhone":"555-521-8158","ManagerEmail":"GuyWilder@gmail.com","MaxTeamMembers":15,"MinMemberAge":17,"MaxMemberAge":100,"TeamGender":"Any","Picture":"/images/section_photos/section_photo_8.jpg","Description":"","Members":[{"MemberId":1,"Email":"HopeMunoz@gmail.com","MemberName":"Hope Munoz","ContactName":"Hope Munoz","Age":18,"Gender":"Male","Phone":"555-521-1746"}]},{"TeamId":9,"TeamName":"Drumline","League":"Percussion","ManagerName":"Kaci Parkinson","ManagerPhone":"555-521-8158","ManagerEmail":"KaciParkinson@gmail.com","MaxTeamMembers":30,"MinMemberAge":17,"MaxMemberAge":100,"TeamGender":"Any","Picture":"/images/section_photos/section_photo_9.jpg","Description":"","Members":[{"MemberId":1,"Email":"AbigailBonillaz@gmail.com","MemberName":"Abigail Bonilla","ContactName":"Abigail Bonilla","Age":21,"Gender":"Female","Phone":"555-521-1746"}]},{"TeamId":10,"TeamName":"Front Ensemble","League":"Percussion","ManagerName":"Teresa Monaghan","ManagerPhone":"555-521-8158","ManagerEmail":"TeresaMonaghan@gmail.com","MaxTeamMembers":20,"MinMemberAge":17,"MaxMemberAge":100,"TeamGender":"Any","Picture":"/images/section_photos/section_photo_10.jpg","Description":"","Members":[{"MemberId":1,"Email":"JimColemanz@gmail.com","MemberName":"Jim Coleman","ContactName":"Jim Coleman","Age":21,"Gender":"Male","Phone":"555-521-3856"}]},{"TeamId":11,"TeamName":"Baton Twirler","League":"Auxiliary","ManagerName":"Ramone Cisneros","ManagerPhone":"555-521-8158","ManagerEmail":"RamoneCisneros@gmail.com","MaxTeamMembers":20,"MinMemberAge":17,"MaxMemberAge":100,"TeamGender":"Any","Picture":"/images/section_photos/section_photo_11.jpg","Description":"","Members":[{"MemberId":1,"Email":"KiraShelton@gmail.com","MemberName":"Kira Shelton","ContactName":"Kira Shelton","Age":19,"Gender":"Female","Phone":"555-521-1756"}]},{"TeamId":12,"TeamName":"Colorguard","League":"Auxiliary","ManagerName":"Vivienne Tierney","ManagerPhone":"555-521-8158","ManagerEmail":"VivienneTierney@gmail.com","MaxTeamMembers":20,"MinMemberAge":17,"MaxMemberAge":100,"TeamGender":"Any","Picture":"/images/section_photos/section_photo_12.jpg","Description":"","Members":[{"MemberId":1,"Email":"MabelPuckett@gmail.com","MemberName":"Mabel Puckett","ContactName":"Mabel Puckett","Age":19,"Gender":"Female","Phone":"555-521-8656"}]}]
+[
+    {
+        "TeamId": 1,
+        "TeamName": "Trumpets",
+        "League": "HighBrass",
+        "ManagerName": "Aliza Barlow",
+        "ManagerPhone": "555-521-8146",
+        "ManagerEmail": "AlizaBarlow@gmail.com",
+        "MaxTeamMembers": 70,
+        "MinMemberAge": 17,
+        "MaxMemberAge": 100,
+        "TeamGender": "Any",
+        "Picture": "/images/section_photos/section_photo_1.jpg",
+        "Description": "",
+        "Members": [
+            {
+                "MemberId": 1,
+                "Email": "LawsonBarnes@gmail.com",
+                "MemberName": "Lawson Barnes",
+                "ContactName": "Lawson Barnes",
+                "Age": 21,
+                "Gender": "Male",
+                "Phone": "555-521-8146"
+            },
+            {
+                "MemberId": 101,
+                "Email": "corinne.a.trudeau@gmail.com",
+                "MemberName": "Corinne Trudeau",
+                "ContactName": "Corinne Trudeau",
+                "Age": 28,
+                "Gender": "Female",
+                "Phone": "860-917-2859"
+            }
+        ]
+    },
+    {
+        "TeamId": 2,
+        "TeamName": "yayayayay",
+        "League": "HighBrass",
+        "ManagerName": "Hollie Harwood",
+        "ManagerPhone": "555-521-8158",
+        "ManagerEmail": "HollieHarwood@gmail.com",
+        "MaxTeamMembers": 40,
+        "MinMemberAge": 17,
+        "MaxMemberAge": 100,
+        "TeamGender": "Any",
+        "Picture": "/images/section_photos/section_photo_2.jpg",
+        "Description": "",
+        "Members": [
+            {
+                "MemberId": 1,
+                "Email": "GregorProsser@gmail.com",
+                "MemberName": "Gregor Prosser",
+                "ContactName": "Gregor Prosser",
+                "Age": 19,
+                "Gender": "Male",
+                "Phone": "555-521-2546"
+            },
+            {
+                "MemberId": 102,
+                "Email": "corinne.a.trudeau@gmail.com",
+                "MemberName": "Cori",
+                "ContactName": "Cori",
+                "Age": 28,
+                "Gender": "Male",
+                "Phone": "860-917-2859"
+            },
+            {
+                "MemberId": 103,
+                "Email": "corinne.a.trudeau@gmail.com",
+                "MemberName": "TEST",
+                "ContactName": "TESt",
+                "Age": 28,
+                "Gender": "Female",
+                "Phone": "860-917-2859"
+            },
+            {
+                "MemberId": 104,
+                "Email": "corinne.a.trudeau@gmail.com",
+                "MemberName": "TEST",
+                "ContactName": "TESt",
+                "Age": 28,
+                "Gender": "Female",
+                "Phone": "860-917-2859"
+            },
+            {
+                "MemberId": 105,
+                "Email": "corinne.a.trudeau@gmail.com",
+                "MemberName": "TEST",
+                "ContactName": "TESt",
+                "Age": 28,
+                "Gender": "Female",
+                "Phone": "860-917-2859"
+            },
+            {
+                "MemberId": 106,
+                "Email": "Will.ader@gmail.com",
+                "MemberName": "cori",
+                "ContactName": "cori",
+                "Age": 28,
+                "Gender": "Female",
+                "Phone": "860-917-2859"
+            }
+        ]
+    },
+    {
+        "TeamId": 3,
+        "TeamName": "Trombone",
+        "League": "LowBrass",
+        "ManagerName": "Sid Branch",
+        "ManagerPhone": "555-521-8567",
+        "ManagerEmail": "SidBranch@gmail.com",
+        "MaxTeamMembers": 25,
+        "MinMemberAge": 17,
+        "MaxMemberAge": 100,
+        "TeamGender": "Any",
+        "Picture": "/images/section_photos/section_photo_3.jpg",
+        "Description": "",
+        "Members": [
+            {
+                "MemberId": 1,
+                "Email": "SnehaHassan.com",
+                "MemberName": "Sneha Hassan",
+                "ContactName": "Sneha Hassan",
+                "Age": 20,
+                "Gender": "Female",
+                "Phone": "555-521-2836"
+            }
+        ]
+    },
+    {
+        "TeamId": 4,
+        "TeamName": "Baritone",
+        "League": "LowBrass",
+        "ManagerName": "Ada Sutherland",
+        "ManagerPhone": "555-521-8158",
+        "ManagerEmail": "AdaSutherland@gmail.com",
+        "MaxTeamMembers": 40,
+        "MinMemberAge": 17,
+        "MaxMemberAge": 100,
+        "TeamGender": "Any",
+        "Picture": "/images/section_photos/section_photo_4.jpg",
+        "Description": "",
+        "Members": [
+            {
+                "MemberId": 1,
+                "Email": "HazelCurran@gmail.com",
+                "MemberName": "Hazel Curran",
+                "ContactName": "Hazel Curran",
+                "Age": 20,
+                "Gender": "Female",
+                "Phone": "555-521-1736"
+            }
+        ]
+    },
+    {
+        "TeamId": 5,
+        "TeamName": "Sousaphone",
+        "League": "LowBrass",
+        "ManagerName": "Felicia Medrano",
+        "ManagerPhone": "555-521-8158",
+        "ManagerEmail": "FeliciaMedrano@gmail.com",
+        "MaxTeamMembers": 20,
+        "MinMemberAge": 17,
+        "MaxMemberAge": 100,
+        "TeamGender": "Any",
+        "Picture": "/images/section_photos/section_photo_5.jpg",
+        "Description": "",
+        "Members": [
+            {
+                "MemberId": 1,
+                "Email": "MistyMoon@gmail.com",
+                "MemberName": "Misty Moon",
+                "ContactName": "Misty Moon",
+                "Age": 50,
+                "Gender": "Female",
+                "Phone": "555-521-1962"
+            }
+        ]
+    },
+    {
+        "TeamId": 6,
+        "TeamName": "Flute",
+        "League": "Woodwind",
+        "ManagerName": "Marlon Whitakero",
+        "ManagerPhone": "555-521-8158",
+        "ManagerEmail": "MarlonWhitaker@gmail.com",
+        "MaxTeamMembers": 5,
+        "MinMemberAge": 17,
+        "MaxMemberAge": 100,
+        "TeamGender": "Any",
+        "Picture": "/images/section_photos/section_photo_6.jpg",
+        "Description": "",
+        "Members": [
+            {
+                "MemberId": 1,
+                "Email": "EarlLester@gmail.com",
+                "MemberName": "Earl Lester",
+                "ContactName": "Earl Lester",
+                "Age": 21,
+                "Gender": "Female",
+                "Phone": "555-521-1962"
+            }
+        ]
+    },
+    {
+        "TeamId": 7,
+        "TeamName": "Clarinet",
+        "League": "Woodwind",
+        "ManagerName": "Marcie Morrison",
+        "ManagerPhone": "555-521-8158",
+        "ManagerEmail": "MarcieMorrisonr@gmail.com",
+        "MaxTeamMembers": 10,
+        "MinMemberAge": 17,
+        "MaxMemberAge": 100,
+        "TeamGender": "Any",
+        "Picture": "/images/section_photos/section_photo_7.jpg",
+        "Description": "",
+        "Members": [
+            {
+                "MemberId": 1,
+                "Email": "JoshRyan@gmail.com",
+                "MemberName": "Josh Ryan",
+                "ContactName": "Josh Ryan",
+                "Age": 18,
+                "Gender": "Male",
+                "Phone": "555-521-1896"
+            }
+        ]
+    },
+    {
+        "TeamId": 8,
+        "TeamName": "Saxophone",
+        "League": "Woodwind",
+        "ManagerName": "Guy Wilder",
+        "ManagerPhone": "555-521-8158",
+        "ManagerEmail": "GuyWilder@gmail.com",
+        "MaxTeamMembers": 15,
+        "MinMemberAge": 17,
+        "MaxMemberAge": 100,
+        "TeamGender": "Any",
+        "Picture": "/images/section_photos/section_photo_8.jpg",
+        "Description": "",
+        "Members": [
+            {
+                "MemberId": 1,
+                "Email": "HopeMunoz@gmail.com",
+                "MemberName": "Hope Munoz",
+                "ContactName": "Hope Munoz",
+                "Age": 18,
+                "Gender": "Male",
+                "Phone": "555-521-1746"
+            }
+        ]
+    },
+    {
+        "TeamId": 9,
+        "TeamName": "Drumline",
+        "League": "Percussion",
+        "ManagerName": "Kaci Parkinson",
+        "ManagerPhone": "555-521-8158",
+        "ManagerEmail": "KaciParkinson@gmail.com",
+        "MaxTeamMembers": 30,
+        "MinMemberAge": 17,
+        "MaxMemberAge": 100,
+        "TeamGender": "Any",
+        "Picture": "/images/section_photos/section_photo_9.jpg",
+        "Description": "",
+        "Members": [
+            {
+                "MemberId": 1,
+                "Email": "AbigailBonillaz@gmail.com",
+                "MemberName": "Abigail Bonilla",
+                "ContactName": "Abigail Bonilla",
+                "Age": 21,
+                "Gender": "Female",
+                "Phone": "555-521-1746"
+            }
+        ]
+    },
+    {
+        "TeamId": 10,
+        "TeamName": "Front Ensemble",
+        "League": "Percussion",
+        "ManagerName": "Teresa Monaghan",
+        "ManagerPhone": "555-521-8158",
+        "ManagerEmail": "TeresaMonaghan@gmail.com",
+        "MaxTeamMembers": 20,
+        "MinMemberAge": 17,
+        "MaxMemberAge": 100,
+        "TeamGender": "Any",
+        "Picture": "/images/section_photos/section_photo_10.jpg",
+        "Description": "",
+        "Members": [
+            {
+                "MemberId": 1,
+                "Email": "JimColemanz@gmail.com",
+                "MemberName": "Jim Coleman",
+                "ContactName": "Jim Coleman",
+                "Age": 21,
+                "Gender": "Male",
+                "Phone": "555-521-3856"
+            }
+        ]
+    },
+    {
+        "TeamId": 11,
+        "TeamName": "Baton Twirler",
+        "League": "Auxiliary",
+        "ManagerName": "Ramone Cisneros",
+        "ManagerPhone": "555-521-8158",
+        "ManagerEmail": "RamoneCisneros@gmail.com",
+        "MaxTeamMembers": 20,
+        "MinMemberAge": 17,
+        "MaxMemberAge": 100,
+        "TeamGender": "Any",
+        "Picture": "/images/section_photos/section_photo_11.jpg",
+        "Description": "",
+        "Members": [
+            {
+                "MemberId": 1,
+                "Email": "KiraShelton@gmail.com",
+                "MemberName": "Kira Shelton",
+                "ContactName": "Kira Shelton",
+                "Age": 19,
+                "Gender": "Female",
+                "Phone": "555-521-1756"
+            }
+        ]
+    },
+    {
+        "TeamId": 12,
+        "TeamName": "Colorguard",
+        "League": "Auxiliary",
+        "ManagerName": "Vivienne Tierney",
+        "ManagerPhone": "555-521-8158",
+        "ManagerEmail": "VivienneTierney@gmail.com",
+        "MaxTeamMembers": 20,
+        "MinMemberAge": 17,
+        "MaxMemberAge": 100,
+        "TeamGender": "Any",
+        "Picture": "/images/section_photos/section_photo_12.jpg",
+        "Description": "",
+        "Members": [
+            {
+                "MemberId": 1,
+                "Email": "MabelPuckett@gmail.com",
+                "MemberName": "Mabel Puckett",
+                "ContactName": "Mabel Puckett",
+                "Age": 19,
+                "Gender": "Female",
+                "Phone": "555-521-8656"
+            }
+        ]
+    }
+]
