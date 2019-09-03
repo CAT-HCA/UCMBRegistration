@@ -6,7 +6,6 @@
 	font-family: arial, sans-serif;
 }
 
-
 .fab {
 	color: white;
 }
@@ -19,8 +18,7 @@
 	font-size: 30px;
 }
 
-
-.cardBodyText{
+.cardBodyText {
 	font-size: 12px;
 }
 
@@ -32,8 +30,7 @@ html {
 
 body {
 	margin-bottom: 200px;
-	min-height:100%;
-
+	min-height: 100%;
 }
 
 .footer {
@@ -42,20 +39,49 @@ body {
 	width: 100%;
 }
 
-
-
 .sidebar {
 	min-height: 100%;
 	left: 0;
-	margin-bottom: -200px;
-
-
 	background-color: #182a60;
-
 	padding-top: 20px;
 }
 
 .row {
 	margin-left: -15px !important;
 	margin-right: -15px !important;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media screen and (max-width: 600px) {
+	.sidebar {
+		margin-bottom: 0px;
+	}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+	.sidebar {
+		margin-bottom: 0px;
+	}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	.sidebar {
+		margin-bottom: 0px;
+	}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	.sidebar {
+		margin-bottom: -200px;
+	}
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+	.sidebar {
+		margin-bottom: -200px;
+	}
 }

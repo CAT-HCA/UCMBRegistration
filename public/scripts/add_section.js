@@ -68,7 +68,8 @@ function validateForm() {
 		errorArray[errorArray.length] = "Please enter a valid Section Leader name";
 	}
 
-	let phoneNumberPattern = new RegExp("^D?(d{3})D?D?(d{3})D?(d{4})$");
+	//let phoneNumberPattern = new RegExp("^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$");
+	let phoneNumberPattern = /^(?:\([2-9]\d{2}\)\ ?|[2-9]\d{2}(?:\-?|\ ?))[2-9]\d{2}[- ]?\d{4}$/;
 	let answer = phoneNumberPattern.test($("#newSectionManagerPhone").val());
 	if (answer != true) {
 		errorArray[errorArray.length] = "Please enter a Section Leader phone number in the format 555-555-5555";

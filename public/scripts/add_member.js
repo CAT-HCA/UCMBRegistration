@@ -5,13 +5,14 @@ $(document).ready(function() {
 	let urlParams = new URLSearchParams(location.search);
 	let sectionId = urlParams.get("id");
 	let sectionName = urlParams.get("name");
+	let leagueCode = urlParams.get("code");
 	 $("#newMemberSection").val(sectionName)
 
 	//create new section (team) button click event
 	$("#addMemberBtn").on("click", function() {
 		let validationResult = validateForm();
 		if (validationResult == true) {
-			postNewMember(sectionId);
+			postNewMember(sectionId, sectionName, leagueCode);
 		}
 	});
 
@@ -61,7 +62,7 @@ function validateForm() {
 	if (result != true) {
 		errorArray[errorArray.length] = "Please enter a valid Section Leader email address";
 	}
-	let phoneNumberPattern = new RegExp("^D?(d{3})D?D?(d{3})D?(d{4})$");
+	let phoneNumberPattern = /^(?:\([2-9]\d{2}\)\ ?|[2-9]\d{2}(?:\-?|\ ?))[2-9]\d{2}[- ]?\d{4}$/;
 	let answer = phoneNumberPattern.test($("#newMemberPhone").val());
 	if (answer != true) {
 		errorArray[errorArray.length] = "Please enter a Section Leader phone number in the format 555-555-5555";
@@ -79,6 +80,7 @@ function validateForm() {
 	}
 }
 
-function postNewMember(sectionId) {
+function postNewMember(sectionId, sectionName, leagueCode) {
 	$.post("/api/teams/" + sectionId + "/members", $("#addMemberForm").serialize(), function(data) {});
+	window.location.assign("team_details.html?id=" + sectionId + "&name=" + sectionName + "&code=" + leagueCode);
 }

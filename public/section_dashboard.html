@@ -42,12 +42,7 @@
         </button>
         <div class="collapse navbar-collapse float-right flex-row-reverse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-item nav-link p-2 mr-2 montserratFont inactive" href="">Instrument Family
-                    Dashboard</a>
                 <a class="nav-item nav-link p-2 mr-2 montserratFont active" href="">Section
-                    Dashboard</a>
-
-                <a class="nav-item nav-link p-2 mr-2 montserratFont inactive" href="">Member
                     Dashboard</a>
             </div>
         </div>
@@ -56,19 +51,25 @@
 
     <!-- Side Nav Bar -->
     <div class="row container-fluid">
-        <div class="sidebar col-md-3 col-xs-12">
+        <div class="sidebar col-lg-3 col-xs-12">
             <form>
                 <div class="mx-auto">
+                    <p class="montserratFont text-white text-center mt-2">Actions:</p>
+                    <hr class="bg-white">
                     <div class="text-center">
+                        <a id="addSection" class="text-white text-center btn btn-danger my-2"
+                            href="add_section.html">Add a New
+                            Section</a>
+
                         <button id="showAllSections" class="text-white text-center btn btn-secondary my-2">Show All
                             Sections</button>
-                        <br>
                     </div>
-                    <p id="filterText" class="montserratFont text-white text-center mt-2">Filter Results By:</p>
+                </div>
+                <div class="mx-auto">
+                    <p id="filterText" class="montserratFont text-white text-center mt-5">Filter Results By:</p>
                     <hr class="bg-white">
                 </div>
                 <div>
-
                     <div id="leagueSelectDiv" class="form-group text-secondary text-center w-75 mx-auto">
                         <!--Drop down for selecting a section-->
                         <label for="leagueDropDown" class="text-white">INSTRUMENT FAMILY</label>
@@ -85,7 +86,6 @@
                         </select>
                         <div class="text-center"><br>-- or --</div>
                     </div>
-
                     <div id="managerSelectDiv" class="form-group text-secondary text-center w-75 mx-auto mb-4">
                         <!--Drop down for selecting a section-->
                         <label for="managerDropDown" class="text-white">SECTION LEADER</label>
@@ -93,15 +93,12 @@
                             <option value="-1">Choose a Section Leader</option>
                         </select>
                     </div>
-
                 </div>
             </form>
         </div>
         <!-- end of Side Nav Bar -->
-
         <!-- MAIN CONTENT -->
-        <div class="col-xs-12 col-md-9 mx-auto container-fluid">
-            <h1 class="text-center montserratFont col-12">Section Dashboard</h1>
+        <div class="col-xs-12 col-lg-9 mx-auto container-fluid">
             <div id="sectionCardDiv" class="text-center">
             </div>
         </div>
@@ -130,7 +127,6 @@
                     created for
                     educational purposes only.</span></p>
         </div>
-
     </footer>
 
     <!--END FOOTER-->
