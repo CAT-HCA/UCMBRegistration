@@ -14,7 +14,6 @@ $(document).ready(function() {
 	});
 
 	$.getJSON("/api/teams/" + sectionId, function(data) {
-
 		$("#instrumentId").html(data.TeamName);
 		$("#maxSectionMems").html(data.MaxTeamMembers);
 		$("#minMemAge").html(data.MinMemberAge);
@@ -25,12 +24,28 @@ $(document).ready(function() {
 		$("#sectionPhoto").attr("src", data.Picture);
 		$("#descriptionId").html(data.Description);
 		for (let i = 0; i < data.Members.length; i++) {
-			createMemberRow(data.Members[i].MemberName, data.Members[i].MemberId, sectionId, data.TeamName, leagueCode, i);
-			
+			createMemberRow(
+				data.Members[i].MemberName,
+				data.Members[i].MemberId,
+				sectionId,
+				data.TeamName,
+				leagueCode,
+				i
+			);
 		}
 	});
 
 	assignSideNavLinks(sectionName, sectionId, leagueCode);
+	$("#deleteTeam").on("click", function() {
+		$.ajax({
+			url: "/api/teams/" + sectionId,
+			method: "DELETE",
+			success: function(result) {
+				alert("The team has been successfully deleted!");
+				window.location.assign("section_dashboard.html");
+			},
+		});
+	});
 });
 
 function createMemberRow(memberName, memberId, sectionId, sectionName, leagueCode, i) {
@@ -40,14 +55,16 @@ function createMemberRow(memberName, memberId, sectionId, sectionName, leagueCod
 			.attr("id", "membershipList" + i)
 	);
 	$("#membershipList" + i).append(
-		$("<a />")
-			.html(`${memberName} <a href="edit_member.html?id=${sectionId}&name=${sectionName}&code=${leagueCode}&memberid=${memberId}" class="float-right"><i class="far fa-edit float-right"></i></a>`)
+		$("<a />").html(
+			`${memberName} <a href="edit_member.html?id=${sectionId}&name=${sectionName}&code=${leagueCode}&memberid=${memberId}" class="float-right"><i class="far fa-edit float-right"></i></a>`
+		)
 	);
 }
 
-
-function assignSideNavLinks(sectionName, sectionId, leagueCode){
-	$("#viewTeamDetails").attr("href", "team_details.html?id=" + sectionId + "&name=" + sectionName + "&code=" + leagueCode);
+function assignSideNavLinks(sectionName, sectionId, leagueCode) {
 	$("#editTeamDetails").attr("href", "edit_section.html?id=" + sectionId);
-	$("#addTeamMember").attr("href", "add_member.html?id=" + sectionId + "&name=" + sectionName + "&code=" + leagueCode);
+	$("#addTeamMember").attr(
+		"href",
+		"add_member.html?id=" + sectionId + "&name=" + sectionName + "&code=" + leagueCode
+	);
 }
