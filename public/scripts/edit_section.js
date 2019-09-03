@@ -3,7 +3,7 @@
 $(function() {
 	//pulling section ID form query string
 	let urlParams = new URLSearchParams(location.search);
-	let TeamId = urlParams.get("id");
+	let teamId = urlParams.get("id");
 
 	//retrieving section data from json file
 	$.getJSON("/api/teams/1", function(data) {
@@ -17,8 +17,8 @@ $(function() {
 		$("#editSectionManagerName").val(data.ManagerName);
 		$("#editSectionManagerPhone").val(data.ManagerPhone);
 		$("#editSectionManagerEmail").val(data.ManagerEmail);
-		$("#editSectionPhotoUpload").val("");
-		$("#editSectionDescription").val("");
+		$("#editSectionPhotoUpload").val(data.Picture);
+		$("#editSectionDescription").val(data.Description);
 	});
 
 	//register button click event
@@ -47,11 +47,11 @@ $(function() {
 
 function finishEditSection() {
 	$.ajax({
-		url: "/api/teams/1",
+		url:"/api/teams",
 		method: "PUT",
 		data: $("#editSectionForm").serialize(),
 		success: function(result) {
-			alert("You're section has been successfully edit");
+			alert("You're section has been successfully edited");
 		},
 	});
 }
