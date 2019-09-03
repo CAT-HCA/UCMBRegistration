@@ -2,16 +2,16 @@
 // document ready event listener
 $(document).ready(function() {
 	//pulling course ID form query string
-	//let urlParams = new URLSearchParams(location.search);
-	// let sectionName = urlParams.get("name");
-	// let sectionId = urlParams.get("id");
+	let urlParams = new URLSearchParams(location.search);
+	let sectionId = urlParams.get("id");
+	let sectionName = urlParams.get("name");
+	 $("#newMemberSection").val(sectionName)
 
-	//  $("#newMemberSection").val(sectionName)
 	//create new section (team) button click event
 	$("#addMemberBtn").on("click", function() {
 		let validationResult = validateForm();
 		if (validationResult == true) {
-			postNewMember();
+			postNewMember(sectionId);
 		}
 	});
 
@@ -79,6 +79,6 @@ function validateForm() {
 	}
 }
 
-function postNewMember() {
-	$.post("/api/teams/1/members", $("#addMemberForm").serialize(), function(data) {});
+function postNewMember(sectionId) {
+	$.post("/api/teams/" + sectionId + "/members", $("#addMemberForm").serialize(), function(data) {});
 }
