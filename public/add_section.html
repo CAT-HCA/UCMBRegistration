@@ -55,75 +55,95 @@
     <!--END NAV BAR-->
 
 
-        <!-- MAIN CONTENT -->
-        <div class="col-xs-12 col-md-7 mx-auto container-fluid">
-            <h1 class="text-center montserratFont col-12">Add a Section</h1>
-            <div id="addSectionDiv" class="mx-auto">
-                <form id="addSectionForm" action="#" method="GET">
-                    <fieldset class="border border-primary rounded p-2 my-3">
-                        <legend class="text-center w-50">Section Details</legend>
-                        <div class="row form-group">
-                            <div class="col-6">
-                                <label for="newSectionId">Section ID: </label>
-                                <input type="text" class="form-control" id="newSectionId" name="newSectionId">
-                            </div>
-                            <div class="col-6">
-                                <label for="newSectionTitle">Section Name: </label>
-                                <input type="text" class="form-control" id="newSectionTitle" name="teamname">
-                            </div class="col-6">
-                            <div id="newSectionLeagueSelectDiv" class="col-12">
-                                <!--Drop down for selecting a section-->
-                                <label for="addTeamLeagueDropDown">Instrument Family:</label>
-                                <select class="form-control" id="addTeamLeagueDropDown" name="leaguecode">
-                                    <option value="-1">Choose a group</option>
-                                </select>
-                            </div>
+    <!-- MAIN CONTENT -->
+    <div class="col-xs-12 col-md-7 mx-auto container-fluid">
+        <h1 class="text-center montserratFont col-12">Add a Section</h1>
+        <div id="addSectionDiv" class="mx-auto">
+            <form id="addSectionForm" action="#" method="GET">
+                <fieldset class="border border-primary rounded p-2 my-3">
+                    <legend class="text-center w-50">Section Details</legend>
+                    <div class="row form-group">
+                        <div class="col-6 form-check">
+                            <label for="newSectionId">Section ID: </label>
+                            <input type="text" class="form-control" id="newSectionId" name="newSectionId">
                         </div>
-                    </fieldset>
-                    <fieldset class="border border-primary rounded p-2 my-3">
-                        <legend class="text-center w-50">Section Leader Details</legend>
-                        <div class="row form-group">
-                            <div class="col-6">
-                                <label for="newSectionManagerName">Name: </label>
-                                <input type="text" class="form-control" id="newSectionManagerName" name="managername">
-                            </div>
-                            <div class="col-6">
-                                <label for="newSectionManagerPhone">Phone Number: </label>
-                                <input type="text" class="form-control" id="newSectionManagerPhone" name="managerphone">
-                            </div class="col-6">
-                            <div class="col-12">
-                                <!--Drop down for selecting a section-->
-                                <label for="newSectionManagerEmail">Email:</label>
-                                <input type="text" class="form-control" id="newSectionManagerEmail" name="manageremail">
-                            </div>
+                        <div class="col-6 form-check">
+                            <label for="newSectionTitle">Section Name: </label>
+                            <input type="text" class="form-control" id="newSectionTitle" name="teamname">
                         </div>
-                    </fieldset>
-                    <fieldset class="border border-primary rounded p-2 my-3">
-                        <legend class="text-center w-50">About Our Section</legend>
-                        <div class="row form-group">
-                            <!--COME BACK TO LATER!!-->
-                            <div class="col-6">
-                                <label for="newSectionPhotoUpload">Upload Section Photo: **WIP**</label>
-                                <input type="file" class="form-control" id="newSectionPhotoUpload" disabled >
-                            </div>
-                            <div class="col-6">
-                                <label for="newSectionDescription">Instrument Description: </label>
-                                <textarea type="text"class="form-control" rows="8" id="newSectionDescription" name="description"></textarea>
-                            </div class="col-6">
+                        <div id="newSectionLeagueSelectDiv" class="col-12 form-check">
+                            <!--Drop down for selecting a section-->
+                            <label for="addTeamLeagueDropDown">Instrument Family:</label>
+                            <select class="form-control" id="addTeamLeagueDropDown" name="leaguecode">
+                                <option value="-1">Choose a group</option>
+                            </select>
                         </div>
-                    </fieldset>
-                    <div id="errorMessageDiv" class="w-50 mx-auto">
-                        <ul id="errorMessages">
-                        </ul>
                     </div>
-                    <div class="form-group text-center">
-                        <input class="btn btn-primary my-3" type="button" id="createSectionBtn"
-                            value="Create Section">
-                        <input class="btn btn-danger my-3" type="button" id="cxlCreateBtn" value="Cancel">
+                </fieldset>
+                <fieldset class="border border-primary rounded p-2 my-3">
+                    <legend class="text-center w-50">Section Membership</legend>
+                    <div class="row form-group">
+                        <div class="col-6 form-check">
+                            <label for="newSectionMaxMems">Maximum Section Members: </label>
+                            <input type="text" class="form-control" id="newSectionMaxMems" name="maxteammembers">
+                        </div>
+                        <div class="col-6 form-check">
+                            <label for="newSectionMinAge">Minimum Member Age: </label>
+                            <input type="text" class="form-control" id="newSectionMinAge" name="minmemberage" value="17" disabled>
+                        </div>
+                        <div class="col-6 form-check">
+                            <label for="newSectionMaxAge">Maximum Member Age:</label>
+                            <input type="text" class="form-control" id="newSectionMaxAge" name="maxmemberage">
+                        </div>
+                        <div class="col-6 form-check">
+                            <label for="newSectionGender">Member Gender: </label>
+                            <input type="text" class="form-control" id="newSectionGender" name="teamgender" value="Any" disabled>
+                        </div>
+                </fieldset>
+                <fieldset class="border border-primary rounded p-2 my-3">
+                    <legend class="text-center w-50">Section Leader Details</legend>
+                    <div class="row form-group">
+                        <div class="col-6 form-check">
+                            <label for="newSectionManagerName">Name: </label>
+                            <input type="text" class="form-control" id="newSectionManagerName" name="managername">
+                        </div>
+                        <div class="col-6 form-check">
+                            <label for="newSectionManagerPhone">Phone Number: </label>
+                            <input type="text" class="form-control" id="newSectionManagerPhone" name="managerphone">
+                        </div>
+                        <div class="col-12 form-check">
+                            <!--Drop down for selecting a section-->
+                            <label for="newSectionManagerEmail">Email:</label>
+                            <input type="text" class="form-control" id="newSectionManagerEmail" name="manageremail">
+                        </div>
                     </div>
-                </form>
-            </div>
+                </fieldset>
+                <fieldset class="border border-primary rounded p-2 my-3">
+                    <legend class="text-center w-50">About Our Section</legend>
+                    <div class="row form-group">
+                        <!--COME BACK TO LATER!!-->
+                        <div class="col-6 form-check">
+                            <label for="newSectionPhotoUpload">Upload Section Photo: **WIP**</label>
+                            <input type="file" class="form-control" id="newSectionPhotoUpload" disabled>
+                        </div>
+                        <div class="col-6 form-check">
+                            <label for="newSectionDescription">Instrument Description: </label>
+                            <textarea type="text" class="form-control" rows="8" id="newSectionDescription"
+                                name="description"></textarea>
+                        </div class="col-6 form-check">
+                    </div>
+                </fieldset>
+                <div id="errorMessageDiv" class="w-50 mx-auto">
+                    <ul id="errorMessages">
+                    </ul>
+                </div>
+                <div class="form-group text-center">
+                    <input class="btn btn-primary my-3" type="button" id="createSectionBtn" value="Create Section">
+                    <input class="btn btn-danger my-3" type="button" id="cxlCreateBtn" value="Cancel">
+                </div>
+            </form>
         </div>
+    </div>
     </div>
     <!-- END OF MAIN CONTENT -->
     <!-- FOOTER -->
