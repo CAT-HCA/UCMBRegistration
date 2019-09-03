@@ -61,7 +61,7 @@ function createHtml(section, i) {
 	//appending image to card
 	$(`#cardId${[i]}`).append(
 		$("<img />")
-			.addClass("card-img-top")
+			.addClass("card-img-top cardImages")
 			.attr({ src: section.Picture, alt: "Marching Band Member" })
 	);
 	// code for src attr once pictures are found src: section.Picture

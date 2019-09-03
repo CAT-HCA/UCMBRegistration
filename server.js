@@ -499,6 +499,7 @@ app.put("/api/teams/:id/members", urlencodedParser, function(req, res) {
 
 	let team = getMatchingTeamById(teamId, data);
 	if (team == null) {
+		console.log("team not found")
 		res.status(404).send("Team Not Found");
 		return;
 	}
@@ -506,6 +507,7 @@ app.put("/api/teams/:id/members", urlencodedParser, function(req, res) {
 	// find existing member on the team
 	let match = team.Members.find(m => m.MemberId == req.body.memberid);
 	if (match == null) {
+		console.log("member not found")
 		res.status(404).send("Member Not Found");
 		return;
 	}
@@ -519,12 +521,12 @@ app.put("/api/teams/:id/members", urlencodedParser, function(req, res) {
 	match.Phone = req.body.phone;
 
 	// make sure edit doesn't violate team rules
-
+console.log("validating min/max age");
 	if (match.Age < team.MinMemberAge || match.Age > team.MaxMemberAge) {
 		res.status(409).send("Member's new age is outside of bounds of team age rules");
 		return;
 	}
-
+	console.log("validating gender");
 	if (team.TeamGender != "Any" && match.Gender != team.TeamGender) {
 		res.status(409).send("Member's new gender does not conform to team gender rules");
 		return;
@@ -532,8 +534,8 @@ app.put("/api/teams/:id/members", urlencodedParser, function(req, res) {
 
 	fs.writeFileSync(__dirname + "/data/teams.json", JSON.stringify(data));
 
-	//console.log("Member edited: ");
-	//console.log("Name: " + match.MemberName)
+	console.log("Member edited: ");
+	console.log("Name: " + match.MemberName)
 	res.status(200).send();
 });
 

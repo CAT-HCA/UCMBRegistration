@@ -7,6 +7,8 @@ $(document).ready(function() {
 	let sectionName = urlParams.get("name");
 	let leagueCode = urlParams.get("code");
 	 $("#newMemberSection").val(sectionName)
+	 $("#addMemberCrumb").attr("href", "team_details.html?id=" + sectionId + "&name=" + sectionName + "&code=" + leagueCode)
+	 .html(sectionName + " Dashboard");
 
 	//create new section (team) button click event
 	$("#addMemberBtn").on("click", function() {

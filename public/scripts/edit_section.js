@@ -18,6 +18,10 @@ $(function() {
 		$("#editSectionPhotoUpload").val(data.Picture);
 		$("#editSectionDescription").val(data.Description);
 
+		$("#manageSectionCrumb").attr("href", "team_details.html?id=" + teamId + "&name=" + data.TeamName + "&code=" + data.League)
+		.html(data.TeamName + " Dashboard");
+
+
 			//register button click event
 	$("#editSectionBtn").on("click", function() {
 		finishEditSection(teamId, data.TeamName, data.League);

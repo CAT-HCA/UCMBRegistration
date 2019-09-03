@@ -16,7 +16,6 @@ $(document).ready(function() {
 	$.getJSON("/api/teams/" + sectionId, function(data) {
 
 		$("#instrumentId").html(data.TeamName);
-		// $("#descriptionId").html(data.League);
 		$("#maxSectionMems").html(data.MaxTeamMembers);
 		$("#minMemAge").html(data.MinMemberAge);
 		$("#studentsEnrolled").html(data.Members.length);
@@ -26,22 +25,23 @@ $(document).ready(function() {
 		$("#sectionPhoto").attr("src", data.Picture);
 		$("#descriptionId").html(data.Description);
 		for (let i = 0; i < data.Members.length; i++) {
-			createMemberRow(data.Members[i].MemberName);
+			createMemberRow(data.Members[i].MemberName, data.Members[i].MemberId, sectionId, data.TeamName, leagueCode, i);
+			
 		}
 	});
 
 	assignSideNavLinks(sectionName, sectionId, leagueCode);
 });
 
-function createMemberRow(memberName) {
+function createMemberRow(memberName, memberId, sectionId, sectionName, leagueCode, i) {
 	$("#membershipListId").append(
 		$("<li />")
 			.addClass("list-group-item")
-			.attr("id", "membershipList")
+			.attr("id", "membershipList" + i)
 	);
-	$("#membershipList").append(
+	$("#membershipList" + i).append(
 		$("<a />")
-			.html(`${memberName} <a class="float-right"><i class="far fa-edit float-right"></i></a>`)
+			.html(`${memberName} <a href="edit_member.html?id=${sectionId}&name=${sectionName}&code=${leagueCode}&memberid=${memberId}" class="float-right"><i class="far fa-edit float-right"></i></a>`)
 	);
 }
 
