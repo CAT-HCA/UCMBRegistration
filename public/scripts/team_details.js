@@ -56,7 +56,8 @@ function createMemberRow(memberName, memberId, sectionId, sectionName, leagueCod
 	);
 	$("#membershipList" + i).append(
 		$("<a />").html(
-			`${memberName} <a href="edit_member.html?id=${sectionId}&name=${sectionName}&code=${leagueCode}&memberid=${memberId}" class="float-right"><i class="far fa-edit float-right"></i></a>`
+			`${memberName} <a href="edit_member.html?id=${sectionId}&name=${sectionName}&code=${leagueCode}&memberid=${memberId}" class="float-right"><i class="far fa-edit float-right"></i></a>
+<a href="member_details.html?id=${sectionId}&name=${sectionName}&code=${leagueCode}&memberid=${memberId}" class="float-right"><i class="fas fa-info-circle float-right"></i></a>`
 		)
 	);
 }
