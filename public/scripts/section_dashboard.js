@@ -62,7 +62,7 @@ function createHtml(section, i) {
 	$(`#cardId${[i]}`).append(
 		$("<img />")
 			.addClass("card-img-top")
-			.attr({ src: "/images/mello_sec.jpg", alt: "Marching Band Member" })
+			.attr({ src: section.Picture, alt: "Marching Band Member" })
 	);
 	// code for src attr once pictures are found src: section.Picture
 	//appending card body to card
@@ -106,15 +106,8 @@ function createHtml(section, i) {
 	//appending header to title div
 	$(`#cardBtnDiv${[i]}`).append(
 		$("<a />")
-			.addClass("btn btn-sm btn-primary col-5 cardBodyText mx-2")
+			.addClass("btn btn-sm btn-info col-9 cardBodyText mx-2")
 			.attr("href", btnHref)
-			.html("View Section")
-	);
-	//appending header to title div
-	$(`#cardBtnDiv${[i]}`).append(
-		$("<a />")
-			.addClass("btn btn-sm btn-primary col-5 cardBodyText")
-			.attr("href", "")
-			.html("Delete Section")
+			.html("Manage Section")
 	);
 }

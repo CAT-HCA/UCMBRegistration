@@ -49,5 +49,5 @@ function createMemberRow(memberName) {
 function assignSideNavLinks(sectionName, sectionId, leagueCode){
 	$("#viewTeamDetails").attr("href", "team_details.html?id=" + sectionId + "&name=" + sectionName + "&code=" + leagueCode);
 	$("#editTeamDetails").attr("href", "edit_section.html?id=" + sectionId);
-	$("#addTeamMember").attr("href", "add_member.html?id=" + sectionId + "&name=" + sectionName);
+	$("#addTeamMember").attr("href", "add_member.html?id=" + sectionId + "&name=" + sectionName + "&code=" + leagueCode);
 }
