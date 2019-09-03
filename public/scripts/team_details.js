@@ -29,6 +29,8 @@ $(document).ready(function() {
 			createMemberRow(data.Members[i].MemberName);
 		}
 	});
+
+	assignSideNavLinks(sectionName, sectionId, leagueCode);
 });
 
 function createMemberRow(memberName) {
@@ -41,4 +43,11 @@ function createMemberRow(memberName) {
 		$("<a />")
 			.html(`${memberName} <a class="float-right"><i class="far fa-edit float-right"></i></a>`)
 	);
+}
+
+
+function assignSideNavLinks(sectionName, sectionId, leagueCode){
+	$("#viewTeamDetails").attr("href", "team_details.html?id=" + sectionId + "&name=" + sectionName + "&code=" + leagueCode);
+	$("#editTeamDetails").attr("href", "edit_section.html?id=" + sectionId);
+	$("#addTeamMember").attr("href", "add_member.html?id=" + sectionId + "&name=" + sectionName);
 }

@@ -6,8 +6,8 @@ $(function() {
 	let teamId = urlParams.get("id");
 
 	//retrieving section data from json file
-	$.getJSON("/api/teams/1", function(data) {
-		$("#editSectionId").val(1);
+	$.getJSON("/api/teams/" + teamId, function(data) {
+		$("#editSectionId").val(teamId);
 		$("#editSectionTitle").val(data.TeamName);
 		$("#editSectionLeagueSelectDropDown").val(data.League);
 		$("#editSectionMaxMems").val(data.MaxTeamMembers);
@@ -29,7 +29,7 @@ $(function() {
 	//go back button click event
 	$("#cxlEditBtn").on("click", function() {
 		$.getJSON("/api/teams/1", function(data) {
-			$("#editSectionId").val(1);
+			$("#editSectionId").val(teamId);
 			$("#editSectionTitle").val(data.TeamName);
 			$("#editSectionLeagueSelectDropDown").val(data.League);
 			$("#editSectionMaxMems").val(data.MaxTeamMembers);
@@ -39,8 +39,8 @@ $(function() {
 			$("#editSectionManagerName").val(data.ManagerName);
 			$("#editSectionManagerPhone").val(data.ManagerPhone);
 			$("#editSectionManagerEmail").val(data.ManagerEmail);
-			$("#editSectionPhotoUpload").val("");
-			$("#editSectionDescription").val("uiyhkjhjkh");
+			$("#editSectionPhotoUpload").val(data.Picture);
+			$("#editSectionDescription").val(data.Description);
 		});
 	});
 });
