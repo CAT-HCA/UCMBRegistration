@@ -24,7 +24,7 @@ $(function() {
 	$.getJSON("/api/teams/" + sectionId + "/members/" + memberId, function(data) {
 
 		$("#editMemberTitle").text(data.MemberName);
-		$("#editMemberId").text(memberId);
+		$("#editMemberId").val(memberId);
 		$("#editMemberSection").val(sectionName);
 		$("#editMemberName").val(data.MemberName);
 		$("#editMemberContactName").val(data.ContactName);
@@ -37,7 +37,7 @@ $(function() {
 		//go back button click event
 		$("#clearEditMemberBtn").on("click", function() {
 			$("#editMemberTitle").text(data.MemberName);
-			$("#editMemberId").text(data.MemberId);
+			$("#editMemberId").val(data.MemberId);
 			$("#editMemberSection").val(sectionName);
 			$("#editMemberName").val(data.MemberName);
 			$("#editMemberContactName").val(data.ContactName);
@@ -50,6 +50,7 @@ $(function() {
 });
 
 function finishEditMember(teamId, sectionName, leagueCode) {
+	alert($("#editMemberForm").serialize())
 	$.ajax({
 		url: `/api/teams/${teamId}/members`,
 		method: "PUT",
