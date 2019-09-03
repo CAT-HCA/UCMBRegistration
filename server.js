@@ -429,13 +429,13 @@ app.post("/api/teams/:id/members", urlencodedParser, function(req, res) {
 		Phone: req.body.phone,
 	};
 
-	//console.log("Performing member validation...")
+	console.log("Performing member validation...")
 	if (!isValidMember(member)) {
-		//console.log("Invalid  data!")
+		console.log("Invalid  data!")
 		res.status(400).send("Bad Request - Incorrect or Missing Data");
 		return;
 	}
-	//console.log("Valid data!")
+	console.log("Valid data!")
 
 	let data = fs.readFileSync(__dirname + "/data/teams.json", "utf8");
 	data = JSON.parse(data);
@@ -463,8 +463,8 @@ app.post("/api/teams/:id/members", urlencodedParser, function(req, res) {
 
 	fs.writeFileSync(__dirname + "/data/teams.json", JSON.stringify(data));
 
-	//console.log("New member added: ");
-	//console.log("Name: " + member.MemberName)
+	console.log("New member added: ");
+	console.log("Name: " + member.MemberName)
 	res.status(200).send();
 });
 
@@ -485,13 +485,13 @@ app.put("/api/teams/:id/members", urlencodedParser, function(req, res) {
 		Phone: req.body.phone,
 	};
 
-	//console.log("Performing member validation...")
+	console.log("Performing member validation...")
 	if (!isValidMember(member)) {
-		//console.log("Invalid  data!")
+		console.log("Invalid  data!")
 		res.status(400).send("Bad Request - Incorrect or Missing Data");
 		return;
 	}
-	//console.log("Valid data!")
+	console.log("Valid data!")
 
 	// find the team
 	let data = fs.readFileSync(__dirname + "/data/teams.json", "utf8");
