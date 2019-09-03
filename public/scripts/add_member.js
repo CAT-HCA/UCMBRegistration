@@ -1,7 +1,7 @@
 "use strict";
 // document ready event listener
 $(document).ready(function() {
-	//pulling course ID form query string
+	//pulling section ID form query string
 	let urlParams = new URLSearchParams(location.search);
 	let sectionId = urlParams.get("id");
 	let sectionName = urlParams.get("name");
@@ -20,7 +20,7 @@ $(document).ready(function() {
 
 	//go back button click event
 	$("#cxlAddMemberBtn").on("click", function() {
-		window.location.assign("section_dashboard.html");
+		window.location.assign("team_details.html?id=" + sectionId + "&name=" + sectionName + "&code=" + leagueCode);
 	});
 });
 
@@ -67,7 +67,7 @@ function validateForm() {
 	let phoneNumberPattern = /^(?:\([2-9]\d{2}\)\ ?|[2-9]\d{2}(?:\-?|\ ?))[2-9]\d{2}[- ]?\d{4}$/;
 	let answer = phoneNumberPattern.test($("#newMemberPhone").val());
 	if (answer != true) {
-		errorArray[errorArray.length] = "Please enter a Section Leader phone number in the format 555-555-5555";
+		errorArray[errorArray.length] = "Please enter a valid phone number in the format 555-555-5555";
 	}
 
 	if (errorArray.length == 0) {
@@ -75,6 +75,7 @@ function validateForm() {
 	}
 	if (errorArray.length > 0) {
 		$("#errorMessages").empty();
+		$("#errorMessageDiv").css("background-color", "#f5baba" )
 		for (let i = 0; i < errorArray.length; i++) {
 			$("<li>" + errorArray[i] + "</li>").appendTo($("#errorMessages"));
 		}

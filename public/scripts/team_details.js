@@ -1,7 +1,7 @@
 "use strict";
 // document ready event listener
 $(document).ready(function() {
-	//pulling course ID form query string
+	//pulling section ID form query string
 	let urlParams = new URLSearchParams(location.search);
 	let sectionName = urlParams.get("name");
 	let sectionId = urlParams.get("id");
@@ -17,7 +17,7 @@ $(document).ready(function() {
 		$("#instrumentId").html(data.TeamName);
 		$("#maxSectionMems").html(data.MaxTeamMembers);
 		$("#minMemAge").html(data.MinMemberAge);
-		$("#studentsEnrolled").html(data.Members.length);
+		$("#membersEnrolled").html(data.Members.length);
 		$("#sectionLeaderName").html(data.ManagerName);
 		$("#sectionLeaderPhone").html(data.ManagerPhone);
 		$("#sectionLeaderEmail").html(data.ManagerEmail);
@@ -70,7 +70,7 @@ function createMemberRow(memberName, memberId, sectionId, sectionName, leagueCod
 }
 
 function assignSideNavLinks(sectionName, sectionId, leagueCode) {
-	$("#editTeamDetails").attr("href", "edit_section.html?id=" + sectionId);
+	$("#editTeamDetails").attr("href", "edit_section.html?id=" + sectionId + "&focus=none");
 	$("#addTeamMember").attr(
 		"href",
 		"add_member.html?id=" + sectionId + "&name=" + sectionName + "&code=" + leagueCode

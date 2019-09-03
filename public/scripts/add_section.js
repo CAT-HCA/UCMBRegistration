@@ -1,13 +1,13 @@
 "use strict";
 // document ready event listener
 $(document).ready(function() {
-	//pulling course ID form query string
+	//pulling section ID form query string
 	let urlParams = new URLSearchParams(location.search);
 	let sectionName = urlParams.get("name");
 	let sectionId = urlParams.get("id");
 	let leagueCode = urlParams.get("code");
 	$("#addSectionCrumb").attr("href", "team_details.html?id=" + sectionId + "&name=" + sectionName + "&code=" + leagueCode)
-	.html(data.TeamName + " Dashboard");
+	.html(sectionName + " Dashboard");
 
 	//retrieving "league"(instrument family) data from json file
 	$.getJSON("/api/leagues", function(data) {
@@ -99,6 +99,7 @@ function validateForm() {
 	}
 	if (errorArray.length > 0) {
 		$("#errorMessages").empty();
+		$("#errorMessageDiv").css("background-color", "#f5baba" )
 		for (let i = 0; i < errorArray.length; i++) {
 			$("<li>" + errorArray[i] + "</li>").appendTo($("#errorMessages"));
 		}
