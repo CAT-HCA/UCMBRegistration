@@ -46,6 +46,13 @@ $(document).ready(function() {
 			},
 		});
 	});
+
+	$("#sectInfoEdit").attr("href", "edit_section.html?id=" + sectionId + "&focus=editSectionId");
+	$("#membershipInfoEdit").attr("href", "edit_section.html?id=" + sectionId + "&focus=editSectionMaxMems");
+	$("#sectLeaderEdit").attr("href", "edit_section.html?id=" + sectionId + "&focus=editSectionManagerName");
+	$("#sectPhotoEdit").attr("href", "edit_section.html?id=" + sectionId + "&focus=editSectionPhotoUpload");
+
+
 });
 
 function createMemberRow(memberName, memberId, sectionId, sectionName, leagueCode, i) {
@@ -56,8 +63,8 @@ function createMemberRow(memberName, memberId, sectionId, sectionName, leagueCod
 	);
 	$("#membershipList" + i).append(
 		$("<a />").html(
-			`${memberName} <a href="edit_member.html?id=${sectionId}&name=${sectionName}&code=${leagueCode}&memberid=${memberId}" class="float-right"><i class="far fa-edit float-right"></i></a>
-<a href="member_details.html?id=${sectionId}&name=${sectionName}&code=${leagueCode}&memberid=${memberId}" class="float-right"><i class="fas fa-info-circle float-right"></i></a>`
+			`${memberName} <a href="edit_member.html?id=${sectionId}&name=${sectionName}&code=${leagueCode}&memberid=${memberId}" class="float-right mx-2"><i class="far fa-edit float-right"></i></a>
+<a href="member_details.html?id=${sectionId}&name=${sectionName}&code=${leagueCode}&memberid=${memberId}" class="float-right mx-2"><i class="fas fa-info-circle float-right"></i></a>`
 		)
 	);
 }

@@ -2,6 +2,12 @@ $(function() {
 	//pulling section ID form query string
 	let urlParams = new URLSearchParams(location.search);
 	let teamId = urlParams.get("id");
+	let fieldFocus = urlParams.get("focus");
+
+	$('html, body').animate({
+        scrollTop: $(`#${fieldFocus}`).offset().top
+    }, 2000);
+	$(`#${fieldFocus}`).focus();
 
 	//retrieving section data from json file
 	$.getJSON("/api/teams/" + teamId, function(data) {

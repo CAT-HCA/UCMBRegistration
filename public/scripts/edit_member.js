@@ -8,6 +8,7 @@ $(function() {
 	let leagueCode = urlParams.get("code");
 	let memberId = urlParams.get("memberid");
 
+
 	$("#editMemberCrumb")
 		.attr("href", "team_details.html?id=" + sectionId + "&name=" + sectionName + "&code=" + leagueCode)
 		.html(sectionName + " Dashboard");
