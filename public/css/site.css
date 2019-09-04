@@ -1,21 +1,10 @@
+/*font classes*/
 .montserratFont {
 	font-family: "Montserrat", sans-serif;
 }
 
 .arialFont {
 	font-family: arial, sans-serif;
-}
-
-.fab {
-	color: white;
-}
-
-.fab:hover {
-	color: #7c878e;
-}
-
-#followSoc {
-	font-size: 30px;
 }
 
 .cardBodyText {
@@ -37,6 +26,18 @@ body {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
+}
+
+.fab {
+	color: white;
+}
+
+.fab:hover {
+	color: #7c878e;
+}
+
+#followSoc {
+	font-size: 30px;
 }
 
 .sidebar {

@@ -1,6 +1,8 @@
+/*sidebar styling*/
 #filterText {
 	font-size: 20px;
 }
+/* styling section cards*/
 .card-title {
 	font-size: 18px;
 }
@@ -15,6 +17,7 @@
 	min-height: 625px;
 }
 
+/* hides no sections registered message*/
 #noSectionMsg{
     display: none;
 }
