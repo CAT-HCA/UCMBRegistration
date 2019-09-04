@@ -284,7 +284,7 @@ app.post("/api/teams", urlencodedParser, function(req, res) {
 		MinMemberAge: Number(req.body.minmemberage),
 		MaxMemberAge: Number(req.body.maxmemberage),
 		TeamGender: req.body.teamgender,
-		Picture: req.body.picture,
+		Picture: "images/section_photos/default_photo.png",
 		Description: req.body.description,
 		Members: [],
 	};
