@@ -66,8 +66,20 @@ function validateForm(availableMems, maxAge) {
 		errorArray[errorArray.length] = "Member age must be a number";
 	}
 	//validating against team age rules
-	if ((Number($("#newMemberAge").val().trim()) >= maxAge)  || (Number($("#newMemberAge").val().trim()) <= 17)) {
-		errorArray[errorArray.length] = "Member does not meet the section's age requirements: minimum age: 17, maximum age: " + maxAge;
+	if (
+		Number(
+			$("#newMemberAge")
+				.val()
+				.trim()
+		) >= maxAge ||
+		Number(
+			$("#newMemberAge")
+				.val()
+				.trim()
+		) <= 17
+	) {
+		errorArray[errorArray.length] =
+			"Member does not meet the section's age requirements: minimum age: 17, maximum age: " + maxAge;
 	}
 
 	let emailPattern = new RegExp("^([0-9a-zA-Z]([-.w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-w]*[0-9a-zA-Z].)+[a-zA-Z]{2,9})$");

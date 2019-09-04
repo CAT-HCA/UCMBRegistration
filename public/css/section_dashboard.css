@@ -7,18 +7,16 @@
 	font-size: 18px;
 }
 .list-group-item {
-    line-height: 6px;
-   
+	line-height: 6px;
 }
-.cardImages{
+.cardImages {
 	height: 150px;
 }
-#sectionCardDiv{
+#sectionCardDiv {
 	min-height: 625px;
 }
 
 /* hides no sections registered message*/
-#noSectionMsg{
-    display: none;
+#noSectionMsg {
+	display: none;
 }
-

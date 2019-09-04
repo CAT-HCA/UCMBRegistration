@@ -27,7 +27,7 @@ $(function() {
 		});
 	});
 
-	//retrieving member data from json file and setting 
+	//retrieving member data from json file and setting
 	// fields to those values
 	$.getJSON("/api/teams/" + sectionId + "/members/" + memberId, function(data) {
 		$("#editMemberTitle").text(data.MemberName);

@@ -3,7 +3,7 @@
 $(document).ready(function() {
 	//retrieving "team" (section and section leader) data from json file
 	$.getJSON("/api/teams", function(data) {
-		if(data.length == 0){
+		if (data.length == 0) {
 			$("#noSectionMsg").css("display", "block");
 		}
 		//loop to populate drop down options
@@ -105,7 +105,9 @@ function createHtml(section, i) {
 			.attr("id", `cardBtnDiv${[i]}`)
 	);
 
-	let btnHref = encodeURI("team_details.html?id=" + section.TeamId + "&name=" + section.TeamName + "&code=" + section.League);
+	let btnHref = encodeURI(
+		"team_details.html?id=" + section.TeamId + "&name=" + section.TeamName + "&code=" + section.League
+	);
 	//appending header to title div
 	$(`#cardBtnDiv${[i]}`).append(
 		$("<a />")
