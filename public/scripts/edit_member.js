@@ -7,7 +7,7 @@ $(function() {
 	let sectionName = urlParams.get("name");
 	let leagueCode = urlParams.get("code");
 	let memberId = urlParams.get("memberid");
-
+	//breadcrumb url to take back to section page
 	$("#editMemberCrumb")
 		.attr("href", "team_details.html?id=" + sectionId + "&name=" + sectionName + "&code=" + leagueCode)
 		.html(sectionName + " Dashboard");
@@ -15,6 +15,7 @@ $(function() {
 	$("#cxlEditMemberBtn").on("click", function() {
 		window.location.assign("team_details.html?id=" + sectionId + "&name=" + sectionName + "&code=" + leagueCode);
 	});
+	//calling API to look up team membership rules
 	$.getJSON("/api/teams/" + sectionId, function(data) {
 		let maxAge = Number(data.MaxMemberAge);
 		//register button click event
@@ -26,7 +27,8 @@ $(function() {
 		});
 	});
 
-	//retrieving section data from json file
+	//retrieving member data from json file and setting 
+	// fields to those values
 	$.getJSON("/api/teams/" + sectionId + "/members/" + memberId, function(data) {
 		$("#editMemberTitle").text(data.MemberName);
 		$("#editMemberId").val(memberId);
@@ -38,7 +40,8 @@ $(function() {
 		$("#editMemberEmail").val(data.Email);
 		$("#editMemberPhone").val(data.Phone);
 
-		//go back button click event
+		//clear edits button click event - will set all
+		// fields back to current value
 		$("#clearEditMemberBtn").on("click", function() {
 			$("#editMemberTitle").text(data.MemberName);
 			$("#editMemberId").val(data.MemberId);
@@ -51,7 +54,7 @@ $(function() {
 			$("#editMemberPhone").val(data.Phone);
 		});
 
-		//go clear changes click event
+		//cancel/go back click event
 		$("#cxlEditMemberBtn").on("click", function() {
 			window.location.assign(
 				"team_details.html?id=" + teamId + "&name=" + data.TeamName + "&code=" + data.League
@@ -60,6 +63,7 @@ $(function() {
 	});
 });
 
+//function to put member update data to team (by sectionId param)
 function finishEditMember(teamId, sectionName, leagueCode) {
 	$.ajax({
 		url: `/api/teams/${teamId}/members`,
@@ -71,7 +75,7 @@ function finishEditMember(teamId, sectionName, leagueCode) {
 	});
 }
 
-//function to validate text fields
+//function to validate form fields
 function validateForm(maxAge) {
 	let errorArray = [];
 	if (
@@ -98,9 +102,21 @@ function validateForm(maxAge) {
 	) {
 		errorArray[errorArray.length] = "Member age must be a number";
 	}
-
-	if ((Number($("#editMemberAge").val().trim()) >= maxAge)  || (Number($("#editMemberAge").val().trim()) <= 17)) {
-		errorArray[errorArray.length] = "Member does not meet the section's age requirements: minimum age: 17, maximum age: " + maxAge;
+	//validating against team age rules
+	if (
+		Number(
+			$("#editMemberAge")
+				.val()
+				.trim()
+		) >= maxAge ||
+		Number(
+			$("#editMemberAge")
+				.val()
+				.trim()
+		) <= 17
+	) {
+		errorArray[errorArray.length] =
+			"Member does not meet the section's age requirements: minimum age: 17, maximum age: " + maxAge;
 	}
 
 	let emailPattern = new RegExp("^([0-9a-zA-Z]([-.w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-w]*[0-9a-zA-Z].)+[a-zA-Z]{2,9})$");
