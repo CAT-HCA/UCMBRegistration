@@ -3,7 +3,8 @@ $(function() {
 	let urlParams = new URLSearchParams(location.search);
 	let teamId = urlParams.get("id");
 	let fieldFocus = urlParams.get("focus");
-
+	//focuses on form field based on which dashboard
+	//widget the clicked
 	if (fieldFocus != "none") {
 		$(`#${fieldFocus}`).focus();
 		$("html, body").animate(
@@ -13,8 +14,8 @@ $(function() {
 			0
 		);
 	}
-
-	//retrieving section data from json file
+	//retrieving section data from json file and setting 
+	// fields to those values
 	$.getJSON("/api/teams/" + teamId, function(data) {
 		$("#editSectionId").val(teamId);
 		$("#editSectionTitle").val(data.TeamName);
@@ -28,20 +29,19 @@ $(function() {
 		$("#editSectionManagerEmail").val(data.ManagerEmail);
 		$("#editSectionPhotoUpload").val(data.Picture);
 		$("#editSectionDescription").val(data.Description);
-
+	//breadcrumb url to take back to section page
 		$("#manageSectionCrumb")
 			.attr("href", "team_details.html?id=" + teamId + "&name=" + data.TeamName + "&code=" + data.League)
 			.html(data.TeamName + " Dashboard");
-
 		//register button click event
 		$("#editSectionBtn").on("click", function() {
 			let validationResult = validateForm();
 			if (validationResult == true) {
-			finishEditSection(teamId, data.TeamName, data.League);
+				finishEditSection(teamId, data.TeamName, data.League);
 			}
 		});
-
-		//go clear changes click event
+		//clear changes click event - will set all
+		// fields back to current value
 		$("#clearEditSectionBtn").on("click", function() {
 			$.getJSON("/api/teams/" + teamId, function(data) {
 				$("#editSectionId").val(teamId);
@@ -58,8 +58,7 @@ $(function() {
 				$("#editSectionDescription").val(data.Description);
 			});
 		});
-		
-		//go clear changes click event
+		//go back/cancel click event
 		$("#cxlEditSectionBtn").on("click", function() {
 			window.location.assign(
 				"team_details.html?id=" + teamId + "&name=" + data.TeamName + "&code=" + data.League
@@ -79,7 +78,7 @@ function finishEditSection(teamId, sectionName, leagueCode) {
 	});
 }
 
-//function to validate text fields
+//function to validate form fields
 function validateForm() {
 	let errorArray = [];
 	if (
@@ -96,26 +95,39 @@ function validateForm() {
 	) {
 		errorArray[errorArray.length] = "Please select an instrument family";
 	}
-    if (isNaN($("#editSectionMaxMems").val().trim())) {
+	if (
+		isNaN(
+			$("#editSectionMaxMems")
+				.val()
+				.trim()
+		)
+	) {
 		errorArray[errorArray.length] = "Maximum Section members must be a number";
-    }
-    if (
+	}
+	//for best instrument balance, no section should have more than 75 members
+	if (
 		$("#editSectionMaxMems")
 			.val()
 			.trim() > 75
 	) {
 		errorArray[errorArray.length] = "No section can have more than 75 members";
-    }
-    if (isNaN($("#editSectionMaxAge").val().trim())) {
+	}
+	if (
+		isNaN(
+			$("#editSectionMaxAge")
+				.val()
+				.trim()
+		)
+	) {
 		errorArray[errorArray.length] = "Maximum member age must be a number";
-    }
-    if (
+	}
+	if (
 		$("#editSectionMaxAge")
 			.val()
 			.trim() > 100
 	) {
 		errorArray[errorArray.length] = "Maximum member age can be no more than 100";
-    }
+	}
 	if (
 		$("#editSectionManagerName")
 			.val()
@@ -124,7 +136,6 @@ function validateForm() {
 		errorArray[errorArray.length] = "Please enter a valid Section Leader name";
 	}
 
-	//let phoneNumberPattern = new RegExp("^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$");
 	let phoneNumberPattern = /^(?:\([2-9]\d{2}\)\ ?|[2-9]\d{2}(?:\-?|\ ?))[2-9]\d{2}[- ]?\d{4}$/;
 	let answer = phoneNumberPattern.test($("#editSectionManagerPhone").val());
 	if (answer != true) {
@@ -147,7 +158,7 @@ function validateForm() {
 	}
 	if (errorArray.length > 0) {
 		$("#errorMessages").empty();
-		$("#errorMessageDiv").css("background-color", "#f5baba" )
+		$("#errorMessageDiv").css("background-color", "#f5baba");
 		for (let i = 0; i < errorArray.length; i++) {
 			$("<li>" + errorArray[i] + "</li>").appendTo($("#errorMessages"));
 		}

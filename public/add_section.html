@@ -21,8 +21,6 @@
     <link rel="stylesheet" type="text/css" href="css/site.css">
     <!-- linking custom site CSS -->
     <link rel="stylesheet" type="text/css" href="css/section_dashboard.css">
-
-
     <!--Title and favicon in tab-->
     <link rel="icon" href="images/favicon.png" type="image/x-icon" />
     <title>UConn Marching Band Registration</title>
@@ -30,8 +28,6 @@
 
 <body class="w-100 bg-light">
     <!--START NAV BAR-->
-
-
     <nav class="navbar navbar-dark navbar-expand-md p-1 px-md-4 bg-warning border-bottom border-white">
         <span class="navbar-brand mb-0 h1">
             <a id="navBarBrandLink" class="navHome" href="index.html"><img class="ml-2"
@@ -50,13 +46,12 @@
     <!--END NAV BAR-->
     <!-- BREADCRUMB NAV-->
     <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="section_dashboard.html">Section Dashboard</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Add Section</li>
-            </ol>
-        </nav>
-        <!-- END OF BREADCRUMB NAV-->
-
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="section_dashboard.html">Section Dashboard</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Add Section</li>
+        </ol>
+    </nav>
+    <!-- END OF BREADCRUMB NAV-->
     <!-- MAIN CONTENT -->
     <div class="col-xs-12 col-md-7 mx-auto container-fluid">
         <h1 class="text-center montserratFont col-12">Add a Section</h1>
@@ -100,6 +95,7 @@
                             <input type="text" class="form-control" id="newSectionGender" name="teamgender" value="Any"
                                 readonly>
                         </div>
+                    </div>
                 </fieldset>
                 <fieldset class="border border-primary rounded p-2 my-3">
                     <legend class="text-center w-50">Section Leader Details</legend>
@@ -127,9 +123,9 @@
                         </div>
                         <div class="col-12 form-check">
                             <label for="newSectionDescription">Instrument Description: </label>
-                            <textarea type="text" class="form-control" rows="8" id="newSectionDescription"
+                            <textarea class="form-control" rows="8" id="newSectionDescription"
                                 name="description"></textarea>
-                        </div class="col-6 form-check">
+                        </div>
                     </div>
                 </fieldset>
                 <div id="errorMessageDiv" class="w-50 mx-auto">
@@ -142,7 +138,6 @@
                 </div>
             </form>
         </div>
-    </div>
     </div>
     <!-- END OF MAIN CONTENT -->
     <!-- FOOTER -->

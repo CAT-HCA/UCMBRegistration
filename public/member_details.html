@@ -19,8 +19,7 @@
     <script src="https://kit.fontawesome.com/d9e1614114.js"></script>
     <!-- linking custom site CSS -->
     <link rel="stylesheet" type="text/css" href="css/site.css">
-    <!-- linking custom site CSS -->
-    <link rel="stylesheet" type="text/css" href="css/section_dashboard.css">
+
 
 
     <!--Title and favicon in tab-->
@@ -50,22 +49,23 @@
     <!--END NAV BAR-->
     <!-- BREADCRUMB NAV-->
     <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a id="viewMemberCrumb">&nbsp;</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Member Details</li>
-            </ol>
-        </nav>
-        <!-- END OF BREADCRUMB NAV-->
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a id="viewMemberCrumb">&nbsp;</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Member Details</li>
+        </ol>
+    </nav>
+    <!-- END OF BREADCRUMB NAV-->
 
     <!-- MAIN CONTENT -->
     <div class="col-xs-12 col-md-7 mx-auto container-fluid">
-        <h1 class="text-center montserratFont col-12">Viewing <span id="viewMemberTitle" class="font-italic"></span> </h1>
+        <h1 class="text-center montserratFont col-12">Viewing <span id="viewMemberTitle" class="font-italic"></span>
+        </h1>
         <div id="editMemberDiv" class="mx-auto">
             <form id="editMemberForm">
                 <fieldset class="border border-primary rounded p-2 my-3">
                     <legend class="text-center w-50">Member Details</legend>
                     <div class="row form-group">
-                            <input id="viewMemberId" name="memberid" type="hidden"/>
+                        <input id="viewMemberId" name="memberid" type="hidden" />
                         <div class="col-12 form-check">
                             <label for="viewMemberSection">Member Section/Instrument: </label>
                             <input type="text" class="form-control" id="viewMemberSection" disabled>
@@ -76,16 +76,17 @@
                         </div>
                         <div class="col-6 form-check">
                             <label for="viewMemberContactName">Contact Name: </label>
-                            <input type="text" class="form-control" id="viewMemberContactName" name="contactname" disabled>
+                            <input type="text" class="form-control" id="viewMemberContactName" name="contactname"
+                                disabled>
                         </div>
                         <div class="col-6 form-check">
                             <label for="viewMemberAge">Member Age: </label>
                             <input type="text" class="form-control" id="viewMemberAge" name="age" disabled>
                         </div>
                         <div class="col-6 form-check">
-                                <label for="viewMemberGender">Member Gender: </label>
-                                <input type="text" class="form-control" id="viewMemberGender" name="gender" disabled>
-                            </div>
+                            <label for="viewMemberGender">Member Gender: </label>
+                            <input type="text" class="form-control" id="viewMemberGender" name="gender" disabled>
+                        </div>
                         <div class="col-6 form-check">
                             <!--Drop down for selecting a section-->
                             <label for="viewMemberEmail">Email:</label>
@@ -96,12 +97,8 @@
                             <label for="viewMemberPhone">Phone Number:</label>
                             <input type="text" class="form-control" id="viewMemberPhone" name="phone" disabled>
                         </div>
-
-
-
                     </div>
                 </fieldset>
-
                 <div id="errorMessageDiv" class="w-50 mx-auto">
                     <ul id="errorMessages">
                     </ul>
@@ -113,7 +110,6 @@
                 </div>
             </form>
         </div>
-
     </div>
     <!-- END OF MAIN CONTENT -->
     <!-- FOOTER -->

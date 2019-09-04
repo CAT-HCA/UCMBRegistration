@@ -6,33 +6,38 @@ $(document).ready(function() {
 	let sectionId = urlParams.get("id");
 	let sectionName = urlParams.get("name");
 	let leagueCode = urlParams.get("code");
+	//setting section name
 	$("#newMemberSection").val(sectionName);
+	//breadcrumb url to take back to section page
 	$("#addMemberCrumb")
 		.attr("href", "team_details.html?id=" + sectionId + "&name=" + sectionName + "&code=" + leagueCode)
 		.html(sectionName + " Dashboard");
-
+	//calling API to look up team membership rules
 	$.getJSON("/api/teams/" + sectionId, function(data) {
 		let availableMems = Number(data.MaxTeamMembers) - Number(data.Members.length);
 		let maxAge = Number(data.MaxMemberAge);
 
-		//create new section (team) button click event
+		//create new member button click event
 		$("#addMemberBtn").on("click", function() {
-			let validationResult = validateForm(sectionId, availableMems, maxAge);
+			//calling function to validate form
+			let validationResult = validateForm(availableMems, maxAge);
+			//if form validates... move forward with creating member
 			if (validationResult == true) {
 				postNewMember(sectionId, sectionName, leagueCode);
 			}
 		});
 	});
 
-	//go back button click event
+	//go back button click event to route back to section page
 	$("#cxlAddMemberBtn").on("click", function() {
 		window.location.assign("team_details.html?id=" + sectionId + "&name=" + sectionName + "&code=" + leagueCode);
 	});
 });
 
-//function to validate text fields
-function validateForm(sectionId, availableMems, maxAge) {
+//function to validate form fields
+function validateForm(availableMems, maxAge) {
 	let errorArray = [];
+	//if the team is already "full"
 	if (availableMems <= 0) {
 		errorArray[errorArray.length] = "This section has reached its maximum number of members";
 	}
@@ -60,6 +65,7 @@ function validateForm(sectionId, availableMems, maxAge) {
 	) {
 		errorArray[errorArray.length] = "Member age must be a number";
 	}
+	//validating against team age rules
 	if ((Number($("#newMemberAge").val().trim()) >= maxAge)  || (Number($("#newMemberAge").val().trim()) <= 17)) {
 		errorArray[errorArray.length] = "Member does not meet the section's age requirements: minimum age: 17, maximum age: " + maxAge;
 	}
@@ -88,7 +94,9 @@ function validateForm(sectionId, availableMems, maxAge) {
 	}
 }
 
+//function to post new member data to team (by sectionId param)
 function postNewMember(sectionId, sectionName, leagueCode) {
 	$.post("/api/teams/" + sectionId + "/members", $("#addMemberForm").serialize(), function(data) {});
+	//directs back to section details page
 	window.location.assign("team_details.html?id=" + sectionId + "&name=" + sectionName + "&code=" + leagueCode);
 }

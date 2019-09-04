@@ -8,6 +8,7 @@ $(function() {
 	let leagueCode = urlParams.get("code");
 	let memberId = urlParams.get("memberid");
 
+		//breadcrumb url to take back to section page
 	$("#viewMemberCrumb")
 		.attr("href", "team_details.html?id=" + sectionId + "&name=" + sectionName + "&code=" + leagueCode)
 		.html(sectionName + " Dashboard");
@@ -16,14 +17,14 @@ $(function() {
 	$("#goBackViewMemberBtn").on("click", function() {
 		window.location.assign("team_details.html?id=" + sectionId + "&name=" + sectionName + "&code=" + leagueCode);
 	});
-	//register button click event
+	//edit member button click event will route to edit member page
 	$("#editViewMemberBtn").on("click", function() {
 		window.location.assign(
 			`edit_member.html?id=${sectionId}&name=${sectionName}&code=${leagueCode}&memberid=${memberId}`
 		);
 	});
 
-	//register button click event
+	//delete member button click event
 	$("#deleteViewMemberBtn").on("click", function() {
 		$.ajax({
 			url: "/api/teams/" + sectionId + "/members/" + memberId,
@@ -35,7 +36,7 @@ $(function() {
 		});
 	});
 
-	//retrieving section data from json file
+	//retrieving member data from json file
 	$.getJSON("/api/teams/" + sectionId + "/members/" + memberId, function(data) {
 		$("#viewMemberTitle").text(data.MemberName);
 		$("#viewMemberId").val(memberId);

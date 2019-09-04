@@ -6,6 +6,7 @@ $(document).ready(function() {
 	let sectionName = urlParams.get("name");
 	let sectionId = urlParams.get("id");
 	let leagueCode = urlParams.get("code");
+	//breadcrumb url to take back to section page
 	$("#addSectionCrumb")
 		.attr("href", "team_details.html?id=" + sectionId + "&name=" + sectionName + "&code=" + leagueCode)
 		.html(sectionName + " Dashboard");
@@ -20,6 +21,7 @@ $(document).ready(function() {
 
 	//create new section (team) button click event
 	$("#createSectionBtn").on("click", function() {
+		//calling function to validate form
 		let validationResult = validateForm();
 		if (validationResult == true) {
 			postNewSection();
@@ -89,7 +91,6 @@ function validateForm() {
 		errorArray[errorArray.length] = "Please enter a valid Section Leader name";
 	}
 
-	//let phoneNumberPattern = new RegExp("^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$");
 	let phoneNumberPattern = /^(?:\([2-9]\d{2}\)\ ?|[2-9]\d{2}(?:\-?|\ ?))[2-9]\d{2}[- ]?\d{4}$/;
 	let answer = phoneNumberPattern.test($("#newSectionManagerPhone").val());
 	if (answer != true) {
@@ -119,8 +120,9 @@ function validateForm() {
 		return false;
 	}
 }
-
+//function to post new member data to team
 function postNewSection() {
 	$.post("/api/teams", $("#addSectionForm").serialize(), function(data) {});
+	//directs back to section details page
 	window.location.assign("/section_dashboard.html");
 }
