@@ -157,5 +157,105 @@
                 "Phone": "555-521-1962"
             }
         ]
+    },
+    {
+        "TeamId": 107,
+        "TeamName": "Clarinet",
+        "League": "Woodwind",
+        "ManagerName": "Marcie Morrison",
+        "ManagerPhone": "555-521-8158",
+        "ManagerEmail": "MarcieMorrisonr@gmail.com",
+        "MaxTeamMembers": 10,
+        "MinMemberAge": 17,
+        "MaxMemberAge": 100,
+        "TeamGender": "Any",
+        "Picture": "images/section_photos/section_photo_7.jpg",
+        "Description": "Clarinets have the largest pitch range of common woodwinds.[9] The intricate key organization that makes this possible can make the playability of some passages awkward. The bottom of the clarinet's written range is defined by the keywork on each instrument, standard keywork schemes allowing a low E on the common B♭ clarinet. The lowest concert pitch depends on the transposition of the instrument in question. The nominal highest note of the B♭ clarinet is a semitone higher than the highest note of the oboe. Since the clarinet has a wider range of notes, the lowest note of the B♭ clarinet is significantly deeper (a minor or major sixth) than the lowest note of the oboe.",
+        "Members": [
+            {
+                "MemberId": 108,
+                "Email": "JoshRyan@gmail.com",
+                "MemberName": "Josh Ryan",
+                "ContactName": "Josh Ryan",
+                "Age": 18,
+                "Gender": "Male",
+                "Phone": "555-521-1896"
+            }
+        ]
+    },
+    {
+        "TeamId": 108,
+        "TeamName": "Saxophone",
+        "League": "Woodwind",
+        "ManagerName": "Guy Wilder",
+        "ManagerPhone": "555-521-8158",
+        "ManagerEmail": "GuyWilder@gmail.com",
+        "MaxTeamMembers": 15,
+        "MinMemberAge": 17,
+        "MaxMemberAge": 100,
+        "TeamGender": "Any",
+        "Picture": "images/section_photos/section_photo_8.jpg",
+        "Description": "A saxophone is a single reed, woodwind instrument first developed in the mid-1800s by Adolphe Sax. It is composed of a mouthpiece, conical metal tube, and finger keys. Sound is produced when air is blown through the instrument causing the reed to vibrate. This sound is amplified as it travels through the instrument's main body. Saxophones consist of numerous parts and pieces which are made separately and then assembled.",
+        "Members": [
+            {
+                "MemberId": 109,
+                "Email": "HopeMunoz@gmail.com",
+                "MemberName": "Hope Munoz",
+                "ContactName": "Hope Munoz",
+                "Age": 18,
+                "Gender": "Male",
+                "Phone": "555-521-1746"
+            }
+        ]
+    },
+    {
+        "TeamId": 109,
+        "TeamName": "Drumline",
+        "League": "Percussion",
+        "ManagerName": "Kaci Parkinson",
+        "ManagerPhone": "555-521-8158",
+        "ManagerEmail": "KaciParkinson@gmail.com",
+        "MaxTeamMembers": 50,
+        "MinMemberAge": 17,
+        "MaxMemberAge": 35,
+        "TeamGender": "Any",
+        "Picture": "images/section_photos/section_photo_9.jpg",
+        "Description": "The batterie drumline is a section that marches on the field as a group. The batterie usually consists of snare drums, bass drums, tenor drums, and cymbals.[2] In the past, marching timpani were common before the adoption of the front ensemble, as were marching keyboard percussion instruments such as glockenspiels and xylophones. A relatively small number of bands, mostly at the college level, continue to field such traditional marching keyboard instruments; however, most bands have phased out their use.",
+        "Members": [
+            {
+                "MemberId": 110,
+                "Email": "AbigailBonillaz@gmail.com",
+                "MemberName": "Abigail Bonilla",
+                "ContactName": "Abigail Bonilla",
+                "Age": 21,
+                "Gender": "Female",
+                "Phone": "555-521-1746"
+            }
+        ]
+    },
+    {
+        "TeamId": 110,
+        "TeamName": "Front Ensemble",
+        "League": "Percussion",
+        "ManagerName": "Teresa Monaghan",
+        "ManagerPhone": "555-521-8158",
+        "ManagerEmail": "TeresaMonaghan@gmail.com",
+        "MaxTeamMembers": 20,
+        "MinMemberAge": 17,
+        "MaxMemberAge": 100,
+        "TeamGender": "Any",
+        "Picture": "images/section_photos/section_photo_10.jpg",
+        "Description": "In a marching band or a drum and bugle corps, the front ensemble or pit is the stationary percussion ensemble. This ensemble is typically placed in front of the football field, though some groups will work the front ensemble into a tight pod onto the marching field. Some high school marching bands opt not to march any percussion instruments, but instead have a \"full\" front ensemble.",
+        "Members": [
+            {
+                "MemberId": 111,
+                "Email": "JimColemanz@gmail.com",
+                "MemberName": "Jim Coleman",
+                "ContactName": "Jim Coleman",
+                "Age": 21,
+                "Gender": "Male",
+                "Phone": "555-521-3856"
+            }
+        ]
     }
 ]
