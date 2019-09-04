@@ -15,12 +15,15 @@ $(function() {
 	$("#cxlEditMemberBtn").on("click", function() {
 		window.location.assign("team_details.html?id=" + sectionId + "&name=" + sectionName + "&code=" + leagueCode);
 	});
-	//register button click event
-	$("#editMemberBtn").on("click", function() {
-		let validationResult = validateForm();
-		if (validationResult == true) {
-		finishEditMember(sectionId, sectionName, leagueCode);
-		}
+	$.getJSON("/api/teams/" + sectionId, function(data) {
+		let maxAge = Number(data.MaxMemberAge);
+		//register button click event
+		$("#editMemberBtn").on("click", function() {
+			let validationResult = validateForm(maxAge);
+			if (validationResult == true) {
+				finishEditMember(sectionId, sectionName, leagueCode);
+			}
+		});
 	});
 
 	//retrieving section data from json file
@@ -48,17 +51,16 @@ $(function() {
 			$("#editMemberPhone").val(data.Phone);
 		});
 
-				//go clear changes click event
-				$("#cxlEditMemberBtn").on("click", function() {
-					window.location.assign(
-						"team_details.html?id=" + teamId + "&name=" + data.TeamName + "&code=" + data.League
-					);
-				});
+		//go clear changes click event
+		$("#cxlEditMemberBtn").on("click", function() {
+			window.location.assign(
+				"team_details.html?id=" + teamId + "&name=" + data.TeamName + "&code=" + data.League
+			);
+		});
 	});
 });
 
 function finishEditMember(teamId, sectionName, leagueCode) {
-	alert($("#editMemberForm").serialize());
 	$.ajax({
 		url: `/api/teams/${teamId}/members`,
 		method: "PUT",
@@ -70,7 +72,7 @@ function finishEditMember(teamId, sectionName, leagueCode) {
 }
 
 //function to validate text fields
-function validateForm() {
+function validateForm(maxAge) {
 	let errorArray = [];
 	if (
 		$("#editMemberName")
@@ -96,14 +98,11 @@ function validateForm() {
 	) {
 		errorArray[errorArray.length] = "Member age must be a number";
 	}
-	if (
-		$("#editMemberAge")
-			.val()
-			.trim() > 100
-	) {
-		errorArray[errorArray.length] = "Member must be younger than the team's maximum age requirement";
+
+	if ((Number($("#editMemberAge").val().trim()) >= maxAge)  || (Number($("#editMemberAge").val().trim()) <= 17)) {
+		errorArray[errorArray.length] = "Member does not meet the section's age requirements: minimum age: 17, maximum age: " + maxAge;
 	}
-	
+
 	let emailPattern = new RegExp("^([0-9a-zA-Z]([-.w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-w]*[0-9a-zA-Z].)+[a-zA-Z]{2,9})$");
 	let result = emailPattern.test($("#editMemberEmail").val());
 	if (result != true) {
@@ -120,7 +119,7 @@ function validateForm() {
 	}
 	if (errorArray.length > 0) {
 		$("#errorMessages").empty();
-		$("#errorMessageDiv").css("background-color", "#f5baba" )
+		$("#errorMessageDiv").css("background-color", "#f5baba");
 		for (let i = 0; i < errorArray.length; i++) {
 			$("<li>" + errorArray[i] + "</li>").appendTo($("#errorMessages"));
 		}
