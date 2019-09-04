@@ -14,3 +14,7 @@
 #sectionCardDiv{
 	min-height: 625px;
 }
+
+#noSectionMsg{
+    display: none;
+}

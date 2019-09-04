@@ -17,11 +17,12 @@ $(document).ready(function() {
 		$("#instrumentId").html(data.TeamName);
 		$("#maxSectionMems").html(data.MaxTeamMembers);
 		$("#minMemAge").html(data.MinMemberAge);
+		$("#maxMemAge").html(data.MaxMemberAge);
 		$("#membersEnrolled").html(data.Members.length);
 		$("#sectionLeaderName").html(data.ManagerName);
 		$("#sectionLeaderPhone").html(data.ManagerPhone);
 		$("#sectionLeaderEmail").html(data.ManagerEmail);
-		$("#sectionPhoto").attr("src", data.Picture);
+		$("#sectionPhoto").prop("src", data.Picture);
 		$("#descriptionId").html(data.Description);
 		for (let i = 0; i < data.Members.length; i++) {
 			createMemberRow(

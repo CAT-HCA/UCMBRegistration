@@ -3,6 +3,9 @@
 $(document).ready(function() {
 	//retrieving "team" (section and section leader) data from json file
 	$.getJSON("/api/teams", function(data) {
+		if(data.length == 0){
+			$("#noSectionMsg").css("display", "block");
+		}
 		//loop to populate drop down options
 		for (let i = 0; i < data.length; i++) {
 			$("#sectionDropDown").append(`<option value='${data[i].TeamId}'>${data[i].TeamName}</option>`);
