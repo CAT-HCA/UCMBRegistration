@@ -83,41 +83,41 @@ function finishEditSection(teamId, sectionName, leagueCode) {
 function validateForm() {
 	let errorArray = [];
 	if (
-		$("#newSectionTitle")
+		$("#editSectionTitle")
 			.val()
 			.trim() == ""
 	) {
 		errorArray[errorArray.length] = "Please enter a valid Section name";
 	}
 	if (
-		$("#addTeamLeagueDropDown")
+		$("#editSectionLeagueSelectDropDown")
 			.val()
 			.trim() == "-1"
 	) {
 		errorArray[errorArray.length] = "Please select an instrument family";
 	}
-    if (isNaN($("#newSectionMaxMems").val().trim())) {
+    if (isNaN($("#editSectionMaxMems").val().trim())) {
 		errorArray[errorArray.length] = "Maximum Section members must be a number";
     }
     if (
-		$("#newSectionMaxMems")
+		$("#editSectionMaxMems")
 			.val()
 			.trim() > 75
 	) {
 		errorArray[errorArray.length] = "No section can have more than 75 members";
     }
-    if (isNaN($("#newSectionMaxAge").val().trim())) {
+    if (isNaN($("#editSectionMaxAge").val().trim())) {
 		errorArray[errorArray.length] = "Maximum member age must be a number";
     }
     if (
-		$("#newSectionMaxAge")
+		$("#editSectionMaxAge")
 			.val()
 			.trim() > 100
 	) {
 		errorArray[errorArray.length] = "Maximum member age can be no more than 100";
     }
 	if (
-		$("#newSectionManagerName")
+		$("#editSectionManagerName")
 			.val()
 			.trim() == ""
 	) {
@@ -126,17 +126,17 @@ function validateForm() {
 
 	//let phoneNumberPattern = new RegExp("^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$");
 	let phoneNumberPattern = /^(?:\([2-9]\d{2}\)\ ?|[2-9]\d{2}(?:\-?|\ ?))[2-9]\d{2}[- ]?\d{4}$/;
-	let answer = phoneNumberPattern.test($("#newSectionManagerPhone").val());
+	let answer = phoneNumberPattern.test($("#editSectionManagerPhone").val());
 	if (answer != true) {
 		errorArray[errorArray.length] = "Please enter a Section Leader phone number in the format 555-555-5555";
 	}
 	let emailPattern = new RegExp("^([0-9a-zA-Z]([-.w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-w]*[0-9a-zA-Z].)+[a-zA-Z]{2,9})$");
-	let result = emailPattern.test($("#newSectionManagerEmail").val());
+	let result = emailPattern.test($("#editSectionManagerEmail").val());
 	if (result != true) {
 		errorArray[errorArray.length] = "Please enter a valid Section Leader email address";
 	}
 	if (
-		$("#newSectionDescription")
+		$("#editSectionDescription")
 			.val()
 			.trim() == ""
 	) {
