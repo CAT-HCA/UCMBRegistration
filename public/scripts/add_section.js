@@ -6,8 +6,9 @@ $(document).ready(function() {
 	let sectionName = urlParams.get("name");
 	let sectionId = urlParams.get("id");
 	let leagueCode = urlParams.get("code");
-	$("#addSectionCrumb").attr("href", "team_details.html?id=" + sectionId + "&name=" + sectionName + "&code=" + leagueCode)
-	.html(sectionName + " Dashboard");
+	$("#addSectionCrumb")
+		.attr("href", "team_details.html?id=" + sectionId + "&name=" + sectionName + "&code=" + leagueCode)
+		.html(sectionName + " Dashboard");
 
 	//retrieving "league"(instrument family) data from json file
 	$.getJSON("/api/leagues", function(data) {
@@ -48,26 +49,38 @@ function validateForm() {
 	) {
 		errorArray[errorArray.length] = "Please select an instrument family";
 	}
-    if (isNaN($("#newSectionMaxMems").val().trim())) {
+	if (
+		isNaN(
+			$("#newSectionMaxMems")
+				.val()
+				.trim()
+		)
+	) {
 		errorArray[errorArray.length] = "Maximum Section members must be a number";
-    }
-    if (
+	}
+	if (
 		$("#newSectionMaxMems")
 			.val()
 			.trim() > 75
 	) {
 		errorArray[errorArray.length] = "No section can have more than 75 members";
-    }
-    if (isNaN($("#newSectionMaxAge").val().trim())) {
+	}
+	if (
+		isNaN(
+			$("#newSectionMaxAge")
+				.val()
+				.trim()
+		)
+	) {
 		errorArray[errorArray.length] = "Maximum member age must be a number";
-    }
-    if (
+	}
+	if (
 		$("#newSectionMaxAge")
 			.val()
 			.trim() > 100
 	) {
 		errorArray[errorArray.length] = "Maximum member age can be no more than 100";
-    }
+	}
 	if (
 		$("#newSectionManagerName")
 			.val()
@@ -99,7 +112,7 @@ function validateForm() {
 	}
 	if (errorArray.length > 0) {
 		$("#errorMessages").empty();
-		$("#errorMessageDiv").css("background-color", "#f5baba" )
+		$("#errorMessageDiv").css("background-color", "#f5baba");
 		for (let i = 0; i < errorArray.length; i++) {
 			$("<li>" + errorArray[i] + "</li>").appendTo($("#errorMessages"));
 		}

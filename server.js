@@ -284,7 +284,7 @@ app.post("/api/teams", urlencodedParser, function(req, res) {
 		MinMemberAge: Number(req.body.minmemberage),
 		MaxMemberAge: Number(req.body.maxmemberage),
 		TeamGender: req.body.teamgender,
-		Picture: "",
+		Picture: req.body.picture,
 		Description: req.body.description,
 		Members: [],
 	};
@@ -327,7 +327,7 @@ app.put("/api/teams", urlencodedParser, function(req, res) {
 		MinMemberAge: Number(req.body.minmemberage),
 		MaxMemberAge: Number(req.body.maxmemberage),
 		TeamGender: req.body.teamgender,
-		Picture: "",
+		Picture: req.body.picture,
 		Description: req.body.description
 	};
 
@@ -355,6 +355,7 @@ app.put("/api/teams", urlencodedParser, function(req, res) {
 	match.ManagerName = req.body.managername;
 	match.ManagerPhone = req.body.managerphone;
 	match.ManagerEmail = req.body.manageremail;
+	match.Description = req.body.description
 
 	// make sure new values for max members, min/max age, or gender
 	// don't conflict with members already on team

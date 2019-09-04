@@ -89,7 +89,7 @@
                         <div class="col-6 form-check">
                             <label for="newSectionMinAge">Minimum Member Age: </label>
                             <input type="text" class="form-control" id="newSectionMinAge" name="minmemberage" value="17"
-                                disabled>
+                                readonly>
                         </div>
                         <div class="col-6 form-check">
                             <label for="newSectionMaxAge">Maximum Member Age:</label>
@@ -98,7 +98,7 @@
                         <div class="col-6 form-check">
                             <label for="newSectionGender">Member Gender: </label>
                             <input type="text" class="form-control" id="newSectionGender" name="teamgender" value="Any"
-                                disabled>
+                                readonly>
                         </div>
                 </fieldset>
                 <fieldset class="border border-primary rounded p-2 my-3">
@@ -122,12 +122,10 @@
                 <fieldset class="border border-primary rounded p-2 my-3">
                     <legend class="text-center w-50">About Our Section</legend>
                     <div class="row form-group">
-                        <!--COME BACK TO LATER!!-->
                         <div class="col-6 form-check">
-                            <label for="newSectionPhotoUpload">Upload Section Photo: **WIP**</label>
-                            <input type="file" class="form-control" id="newSectionPhotoUpload" disabled>
+                            <input type="hidden" class="form-control" id="newSectionPhotoUpload" name="picture" value="/images/section_photos/default_photo.jpg">
                         </div>
-                        <div class="col-6 form-check">
+                        <div class="col-12 form-check">
                             <label for="newSectionDescription">Instrument Description: </label>
                             <textarea type="text" class="form-control" rows="8" id="newSectionDescription"
                                 name="description"></textarea>

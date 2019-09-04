@@ -18,7 +18,7 @@ $(document).ready(function() {
 		}
 	});
 
-	// call to leagues api to pull teams matching selected category
+	// call to leagues api to pull teams matching drop down selection
 	$("#leagueDropDown").on("change", function() {
 		$("#sectionCardDiv").empty();
 		if ($("#leagueDropDown").val() != "-1") {
@@ -30,13 +30,13 @@ $(document).ready(function() {
 		}
 	});
 
-	// call to teams api to pull teams matching selected category
+	// call to teams api to pull teams matching drop down selection
 	$("#sectionDropDown").on("change", function() {
 		$("#sectionCardDiv").empty();
 		callGetTeams($("#sectionDropDown"), "/api/teams/");
 	});
 
-	// call to teams api to pull teams matching selected category
+	// call to teams api to pull teams matching drop down selection
 	$("#managerDropDown").on("change", function() {
 		$("#sectionCardDiv").empty();
 		callGetTeams($("#managerDropDown"));
