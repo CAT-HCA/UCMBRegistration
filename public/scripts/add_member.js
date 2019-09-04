@@ -8,7 +8,7 @@ $(document).ready(function() {
 	let leagueCode = urlParams.get("code");
 	//setting section name
 	$("#newMemberSection").val(sectionName);
-	//breadcrumb url to take back to specific page
+	//breadcrumb url to take back to section page
 	$("#addMemberCrumb")
 		.attr("href", "team_details.html?id=" + sectionId + "&name=" + sectionName + "&code=" + leagueCode)
 		.html(sectionName + " Dashboard");
@@ -17,7 +17,7 @@ $(document).ready(function() {
 		let availableMems = Number(data.MaxTeamMembers) - Number(data.Members.length);
 		let maxAge = Number(data.MaxMemberAge);
 
-		//create new section (team) button click event
+		//create new member button click event
 		$("#addMemberBtn").on("click", function() {
 			//calling function to validate form
 			let validationResult = validateForm(availableMems, maxAge);
