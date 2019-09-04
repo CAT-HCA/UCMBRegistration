@@ -1,4 +1,9 @@
-
-  .jtronVideo{
-      width: "100%"
-  }
+/*Index page jumbotron*/
+.jumbotron {
+	margin-bottom: 0px;
+	background-image: url(../images/jtronimg.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-height: 300px
+}

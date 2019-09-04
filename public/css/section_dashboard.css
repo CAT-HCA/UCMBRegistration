@@ -11,3 +11,6 @@
 .cardImages{
 	height: 150px;
 }
+#sectionCardDiv{
+	min-height: 625px;
+}
