@@ -14,7 +14,7 @@ $(function() {
 			0
 		);
 	}
-	//retrieving section data from json file and setting 
+	//retrieving section data from json file and setting
 	// fields to those values
 	$.getJSON("/api/teams/" + teamId, function(data) {
 		$("#editSectionId").val(teamId);
@@ -29,7 +29,7 @@ $(function() {
 		$("#editSectionManagerEmail").val(data.ManagerEmail);
 		$("#editSectionPhotoUpload").val(data.Picture);
 		$("#editSectionDescription").val(data.Description);
-	//breadcrumb url to take back to section page
+		//breadcrumb url to take back to section page
 		$("#manageSectionCrumb")
 			.attr("href", "team_details.html?id=" + teamId + "&name=" + data.TeamName + "&code=" + data.League)
 			.html(data.TeamName + " Dashboard");
